@@ -12,6 +12,7 @@
 
 	<div id="main">
 		<div>조합</div>
+		<div>무슨조합</div>
 	</div>
 
 	<footer>copyright by ..</footer>
