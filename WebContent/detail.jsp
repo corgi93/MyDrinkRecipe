@@ -6,15 +6,14 @@
 <meta charset="utf-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
 <style>
 div.img1 {
 	position: absolute;
 	right: 200px;
 	left: 200px;
 	top: 100px;
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	border: 1px solid gray;
 }
 
@@ -28,35 +27,45 @@ div.content1 {
 	border: 1px solid gray;
 }
 
-#imgprice {
+img.img_attr {
+	top: 500px;
+	width: 120px;
+	height: 120px;
+
+}
+
+#recipe_info {
+	position: absolute;
+	top: 500px;
+	maring-top: 200px;
+}
+
+div.attrs {
+	display: inline-block;
+	maring-top: 20px;
+}
+
+div.attrs>img_attr1 {
 	position: absolute;
 	right: 200px;
 	left: 200px;
-	top: 520px;
-	width: 100px;
-	height: 100px;
+	
 	/* border: 1px solid gray; */
 }
-
-#imgtime {
+div.attrs>img_attr2{
 	position: absolute;
 	right: 200px;
 	left: 500px;
-	top: 540px;
-	width: 100px;
-	height: 100px;
+
 	/* border: 1px solid gray; */
 }
 
-#imgkcal {
+div.attrs>img_attr3 {
 	position: absolute;
 	right: 200px;
 	left: 800px;
-	top: 540px;
-	width: 100px;
-	height: 100px;
-	}/* border: 1px solid gray; */
 
+} /* border: 1px solid gray; */
 </style>
 
 </head>
@@ -76,7 +85,7 @@ div.content1 {
 		<h3>#그린티 프라푸치노</h3>
 		<h3>#에스프레소 1샷</h3>
 		<h3>#에스프레소 2샷</h3>
-		
+
 		<!-- <pre>
 		레시피= #통자바칩 1/2
 			#초코드리즐
@@ -86,14 +95,17 @@ div.content1 {
 			#에스프레소 1샷</pre> -->
 	</div>
 
-	<div id="imgprice">
-		<img src="../image/price.png" />
+	<div id="recipe_info">
+		<div class="attrs">
+			<img class="img_attr1" src="../image/price.png" />
+		</div>
+		<div class="attrs">
+			<img class="img_attr2" src="../image/time.png" />
+		</div>
+		<div class="attrs">
+			<img class="img_attr3" src="../image/kcal.png" />
+		</div>
 	</div>
-	<div id="imgtime">
-		<img src="../image/time3.png" />
-	</div>
-	<div id="imgkcal">
-		<img src="../image/kcal.png" />
-	</div>
+	
 </body>
 </html>
