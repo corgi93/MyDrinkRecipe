@@ -9,7 +9,6 @@
 </head>
 <body>
 레시피 가이드
-
 레시피 테스트
 </body>
 </html>
