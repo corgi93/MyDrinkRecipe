@@ -74,18 +74,3 @@
 	<footer> 사업자: team_Acorn </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

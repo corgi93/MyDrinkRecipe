@@ -1,1 +1,18 @@
 /build/
+
+# Eclipse #
+.classpath
+.settings/
+bin/**
+.project
+
+# OS Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.db
+
+
