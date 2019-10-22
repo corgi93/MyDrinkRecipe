@@ -1,11 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>이색음료대잔치</title>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <style type="text/css">
 .header {
 	background-color: gray;

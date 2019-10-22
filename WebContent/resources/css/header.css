@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+}
+
+header {
+	width: 100%;
+	border: 1px solid #eeeeee;
+	background-color: #fff;
+	padding: 10px 0 10px 0;
+	height: 45px;
+	border: 1px solid #eeeeee;
+}
+
+div.header-container{
+	width: 85%;
+	margin: 0 auto;
+}
+
+div.logo {
+	width: 30%;
+	height: 45px;
+	line-height: 45px;
+	font-family: 'Anton', sans-serif;
+	font-size: 30px;
+	margin-left: 20px;
+	float: left;
+	color: #0522ee;
+}
+
+div.user_area {
+	float: right;
+}
+
+div.user_area ul {
+	list-style: none;
+	margin: 0;
+	line-height: 45px;
+}
+
+div.user_area ul li {
+	display: inline;
+	margin-left: 15px;
+}
