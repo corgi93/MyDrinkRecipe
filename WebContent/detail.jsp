@@ -77,7 +77,7 @@ attrs.img_attr3 {
 	</div>
 
 	<div class="content1">
-		<h2>탱크보이주1</h2>
+		<h2>탱크보이주</h2>
 		<hr>
 		<ul>
 			<li>레시피Recipe</li>
