@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,18 +12,18 @@ div.img1 {
 	right: 200px;
 	left: 200px;
 	top: 100px;
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	border: 1px solid gray;
 }
 
 div.content1 {
 	position: absolute;
 	right: 200px;
-	left: 500px;
+	left: 800px;
 	top: 100px;
-	width: 400px;
-	height: 400px;
+	width: 500px;
+	height: 450px;
 	border: 1px solid gray;
 }
 
@@ -31,12 +31,12 @@ img.img_attr {
 	top: 500px;
 	width: 120px;
 	height: 120px;
-
 }
 
 #recipe_info {
 	position: absolute;
-	top: 500px;
+	top: 600px;
+	left: 400px;
 	maring-top: 200px;
 }
 
@@ -45,14 +45,16 @@ div.attrs {
 	maring-top: 20px;
 }
 
-div.attrs>img_attr1 {
+attrs.img_attr1 {
 	position: absolute;
+	top: 100px;
 	right: 200px;
 	left: 200px;
-	
+
 	/* border: 1px solid gray; */
 }
-div.attrs>img_attr2{
+
+attrs.img_attr2 {
 	position: absolute;
 	right: 200px;
 	left: 500px;
@@ -60,52 +62,50 @@ div.attrs>img_attr2{
 	/* border: 1px solid gray; */
 }
 
-div.attrs>img_attr3 {
+attrs.img_attr3 {
 	position: absolute;
+	top: 50px;
 	right: 200px;
 	left: 800px;
-
 } /* border: 1px solid gray; */
 </style>
 
 </head>
 <body>
 	<div class="img1">
-		<img src="../image/SurekPra.png" />
+		<img src="./image/tank.jpg" />
 	</div>
 
 	<div class="content1">
-		<h1>슈렉프라푸치노</h1>
+		<h2>탱크보이주1</h2>
 		<hr>
-		<h2>레시피Recipe</h2>
-		<h3>#통자바칩 1/2</h3>
-		<h3>#초코드리즐</h3>
-		<h3>#일반휘핑</h3>
-		<h3>#자바칩1/2 갈아넣기</h3>
-		<h3>#그린티 프라푸치노</h3>
-		<h3>#에스프레소 1샷</h3>
-		<h3>#에스프레소 2샷</h3>
-
-		<!-- <pre>
-		레시피= #통자바칩 1/2
-			#초코드리즐
-			#일반휘핑
-			#자바칩1/2 갈아넣기
-			#그린티 프라푸치노
-			#에스프레소 1샷</pre> -->
-	</div>
-
-	<div id="recipe_info">
-		<div class="attrs">
-			<img class="img_attr1" src="../image/price.png" />
-		</div>
-		<div class="attrs">
-			<img class="img_attr2" src="../image/time.png" />
-		</div>
-		<div class="attrs">
-			<img class="img_attr3" src="../image/kcal.png" />
+		<ul>
+			<li>레시피Recipe</li>
+			<li>탱크보이 1개</li>
+			<li>소주4잔</li>
+			<li>사이다 4잔</li>
+			<li>스키틀즈 (토핑은 선택)</li>
+		</ul>
+		<div id="recipe_info">
+			<div class="attrs">
+				<img class="img_attr1" src="./image/price.png"
+					style="width: 200px; height: 200px;" />
+				<div>가격=약5200원(스키틀즈 포함)</div>
+			</div>
+			<div class="attrs">
+				<img class="img_attr2" src="./image/time.png"
+					style="width: 160px; height: 160px;" />
+				<div>시간=약1분</div>
+			</div>
+			<div class="attrs">
+				<img class="img_attr3" src="./image/kcal.png"
+					style="width: 200px; height: 200px;" />
+				<div>칼로리=약310kcal</div>
+			</div>
 		</div>
 	</div>
-	
+
+
+
 </body>
 </html>

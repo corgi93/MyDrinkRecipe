@@ -11,3 +11,4 @@ public class RecipeDto {
 	private int r_readcount;
 	private int r_category;
 }
+	
