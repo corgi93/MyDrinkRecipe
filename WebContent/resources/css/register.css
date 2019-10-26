@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+div#register_area {
+	margin: 0 auto;
+	width: 40%;
+}
+
+form>div {
+	margin-top: 30px;
+	line-height: 30px;
+}
+
+input.register_input {
+	float: right;
+	width: 70%;
+	height: 30px;
+}
+
+div.form_btns {
+	text-align: center;
+}
+
+button.btns {
+	border-radius: 1.0em;
+	border: solid 1px #ff0000;
+	background-color: white;
+	margin: 0 auto;
+	height: 40px;
+	width: 70px;
+
+
+.btns:hover {
+	background-color: red;
+	color: white;
+}
