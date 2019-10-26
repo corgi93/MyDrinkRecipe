@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.login-container {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.form-body {
+	width: 30%;
+	margin: 0 auto;
+}
+
+input.login_form {
+	height: 30px;
+	margin: 0 auto;
+	width : 100%;
+}
+
+.text {
+	text-align: left;
+	font-family: 'Sunflower';
+}
