@@ -4,26 +4,35 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>MY DRINK RECIPE</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 <link
 	href="https://fonts.googleapis.com/css?family=Anton|Jomolhari|Sunflower:300&display=swap"
 	rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="resources/css/header.css">
+<link rel="stylesheet" type="text/css"
+	href="/MyDrinkRecipe/resources/css/header.css">
+<link rel="stylesheet" type="text/css"
+	href="/MyDrinkRecipe/resources/css/register.css">
+<link rel="stylesheet" type="text/css"
+	href="/MyDrinkRecipe/resources/css/userform.css">
+
 
 </head>
 <body>
 	<header>
 		<div class="header-container">
-			<div class="logo" >MY DRINK RECIPE</div>
+			<div class="logo">
+				<a href="/MyDrinkRecipe/main.jsp"><img style="width:100px; height: 100%;"
+					 src="resources/img/mdr_logo.png"></a>
+			</div>
 
 			<div class="user_area">
 				<ul>
-					<li>레시피등록</li>
-					<li>로그인</li>
-					<li>회원가입</li>
+					<li class="register"><a
+						href="/MyDrinkRecipe/views/register.jsp">레시피등록</a></li>
+					<li class="login"><a href="/MyDrinkRecipe/views/login.jsp">로그인</a></li>
 				</ul>
 			</div>
 		</div>
