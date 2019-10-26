@@ -87,7 +87,7 @@ attrs.img_attr3 {
 			<li>스키틀즈 (토핑은 선택)</li>
 		</ul>
 		<div id="recipe_info">
-			<div class="attrs">
+			<div class="attrs">	
 				<img class="img_attr1" src="./image/price.png"
 					style="width: 200px; height: 200px;" />
 				<div>가격=약5200원(스키틀즈 포함)</div>
@@ -105,7 +105,6 @@ attrs.img_attr3 {
 		</div>
 	</div>
 
-
-
 </body>
 </html>
+		<h2>탱크보이주</h2>
