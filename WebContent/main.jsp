@@ -15,7 +15,7 @@
 }
 
 .button {
-	background-color: #f44336; /* Green */
+	background-color: #f44336;
 	border: none;
 	color: white;
 	padding: 20px;
@@ -34,10 +34,10 @@
 
 .recipe_card {
 	display: inline-block;
-	margin-right: 20px;
-	padding: 30px;
-	width: 250px;
-	height: 300px;
+	margin: 0px 10px 10px 00px;
+	padding: 10px;
+	width: 200px;
+	height: 350px;
 	border: 1px solid black;
 }
 
@@ -45,10 +45,42 @@ img {
 	vertical-align: center;
 }
 
+p {
+	margin: 0;
+	padding: 5px;
+}
+
+.card_img {
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	width: 200px;
+}
+
+.card1 img {
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 100%;
+}
+
+.card2 {
+	margin-top: -40px;
+	display: inline-block;
+}
+
+.card2 img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+}
+
 /*
  banner 애니메이션 css
 */
-
 .dot {
 	height: 15px;
 	width: 15px;
@@ -59,7 +91,7 @@ img {
 }
 
 .active {
-  background-color: #7171ff;
+	background-color: #7171ff;
 }
 
 /* fade animation*/
@@ -72,6 +104,7 @@ img {
 keyframes fade {
 	from {opacity: .4
 }
+
 to {
 	opacity: 1
 }
@@ -101,17 +134,209 @@ to {
 		</div>
 
 		<b>최신레시피</b>
+
 		<div class="recipes">
-			<div class="recipe_card"></div>
-			<div class="recipe_card"></div>
-			<div class="recipe_card"></div>
-			<div class="recipe_card"></div>
-			<div class="recipe_card"></div>
-			<div class="recipe_card"></div>
-			<div class="recipe_card"></div>
-			<div class="recipe_card"></div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1"> <img src="./image/drop.jpg">
+					</a> <a class="card2"> <img src="./image/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4">제목</a>
+					</p>
+					<p>
+						<a class="card5">메인재료</a>
+					</p>
+				</div>
+				<div style="border: solid gay;">
+					<span><i class="fas fa-heart"></i>명</span> <span><i
+						class="fas fa-hourglass-half"></i>분</span>
+				</div>
+			</div>
 		</div>
 	</div>
+
 	<footer> 사업자: team_Acorn </footer>
 
 	<script type="text/javascript">
@@ -139,7 +364,7 @@ to {
 			for (var i = 0; i < dots.length; i++) {
 				dots[i].className = dots[i].className.replace("active", "");
 			}
-			
+
 			slides[slide_idx - 1].style.display = "block";
 			dots[slide_idx - 1].className += " active";
 
