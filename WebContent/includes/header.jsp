@@ -18,14 +18,15 @@
 <link rel="stylesheet" type="text/css"
 	href="/MyDrinkRecipe/resources/css/userform.css">
 
-
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 </head>
 <body>
 	<header>
 		<div class="header-container">
 			<div class="logo">
-				<a href="/MyDrinkRecipe/main.jsp"><img style="width:100px; height: 100%;"
-					 src="resources/img/mdr_logo.png"></a>
+				<a href="/MyDrinkRecipe/main.jsp"><img
+					style="width: 100px; height: 100%;"
+					src="resources/img/mdr_logo.png"></a>
 			</div>
 
 			<div class="user_area">
