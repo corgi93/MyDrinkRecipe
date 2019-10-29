@@ -1,13 +1,12 @@
 @charset "UTF-8";
 
 .login-container {
-	width: 50%;
 	margin: 0 auto;
 	text-align: center;
 }
 
 .form-body {
-	width: 30%;
+	width: 375px;
 	margin: 0 auto;
 }
 
@@ -20,4 +19,8 @@ input.login_form {
 .text {
 	text-align: left;
 	font-family: 'Sunflower';
+}
+
+div.checkMsg{
+	font-size: 7px;
 }
