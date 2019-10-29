@@ -138,8 +138,8 @@ to {
 		<div class="recipes">
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -160,8 +160,8 @@ to {
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -182,8 +182,8 @@ to {
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -204,8 +204,8 @@ to {
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -226,8 +226,8 @@ to {
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -248,8 +248,8 @@ to {
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -270,8 +270,8 @@ to {
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -292,8 +292,8 @@ to {
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -314,8 +314,8 @@ to {
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./image/drop.jpg">
-					</a> <a class="card2"> <img src="./image/love.jpg">
+					<a class="card1"> <img src="./resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="./resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
