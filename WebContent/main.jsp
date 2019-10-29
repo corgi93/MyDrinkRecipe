@@ -78,10 +78,23 @@ p {
 	height: 70px;
 }
 
+.option1 {
+	float: left;
+	margin-left: 20px;
+	padding: 10px;
+}
+
+.option2 {
+	float: right;
+	margin-right: 20px;
+	padding: 10px;
+}
+
 /*
  banner 애니메이션 css
 */
-.dot {
+.
+dot {
 	height: 15px;
 	width: 15px;
 	background-color: #bbb;
@@ -138,8 +151,8 @@ to {
 		<div class="recipes">
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
+					<a class="card1"> <img src="resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -153,15 +166,19 @@ to {
 						<a class="card5">메인재료</a>
 					</p>
 				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;분
+					</div>
 				</div>
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
+					<a class="card1"> <img src="resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -175,15 +192,19 @@ to {
 						<a class="card5">메인재료</a>
 					</p>
 				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;분
+					</div>
 				</div>
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
+					<a class="card1"> <img src="resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -197,15 +218,19 @@ to {
 						<a class="card5">메인재료</a>
 					</p>
 				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;분
+					</div>
 				</div>
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
+					<a class="card1"> <img src="resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -219,15 +244,19 @@ to {
 						<a class="card5">메인재료</a>
 					</p>
 				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;분
+					</div>
 				</div>
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
+					<a class="card1"> <img src="resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -241,15 +270,19 @@ to {
 						<a class="card5">메인재료</a>
 					</p>
 				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;분
+					</div>
 				</div>
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
+					<a class="card1"> <img src="resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -263,15 +296,19 @@ to {
 						<a class="card5">메인재료</a>
 					</p>
 				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;분
+					</div>
 				</div>
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
+					<a class="card1"> <img src="resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -285,15 +322,19 @@ to {
 						<a class="card5">메인재료</a>
 					</p>
 				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;분
+					</div>
 				</div>
 			</div>
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
+					<a class="card1"> <img src="resources/img/drop.jpg">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
 					</a>
 				</div>
 				<div style="text-align: center;">
@@ -307,34 +348,15 @@ to {
 						<a class="card5">메인재료</a>
 					</p>
 				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;분
+					</div>
 				</div>
-			</div>
-			<div class="recipe_card">
-				<div class="card_img">
-					<a class="card1"> <img src="./resources/img/drop.jpg">
-					</a> <a class="card2"> <img src="./resources/img/love.jpg">
-					</a>
-				</div>
-				<div style="text-align: center;">
-					<p>
-						<a class="card3"><b>닉네임</b></a>
-					</p>
-					<p>
-						<a class="card4">제목</a>
-					</p>
-					<p>
-						<a class="card5">메인재료</a>
-					</p>
-				</div>
-				<div style="border: solid gay;">
-					<span><i class="fas fa-heart"></i>명</span> <span><i
-						class="fas fa-hourglass-half"></i>분</span>
-				</div>
-			</div>
-		</div>
+			</div>create
 	</div>
 
 	<footer> 사업자: team_Acorn </footer>
