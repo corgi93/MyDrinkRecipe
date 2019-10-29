@@ -1,0 +1,143 @@
+package com.mydrinkrecipe.db;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mydrinkrecipe.dbconnect.DbConnect;
+import com.mydrinkrecipe.dto.MemberDto;
+
+public class MemberDB {
+	DbConnect db = new DbConnect();
+	
+
+	// 가입. insert 멤버
+	public void registerMember(MemberDto dto) {
+		String sql = "insert into member values(seq_user.nextval,?,?,?,?,sysdate)";
+
+		Connection conn = db.getConnection();
+		PreparedStatement ps = null;
+
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, dto.getNickname());
+			ps.setString(2, dto.getId());
+			ps.setString(3, dto.getPassword());
+			ps.setString(4, dto.getEmail());
+
+			ps.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			db.dbClose(ps, conn);
+		}
+	}
+
+	public MemberDto getLoginData(String id) {
+		MemberDto dto = new MemberDto();
+		String sql = "select id, pw from member where id=?";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		conn = db.getConnection();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				dto.setId(rs.getString("id"));
+				dto.setPassword(rs.getString("pw"));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		return dto;
+	}
+
+	// 아이디가 있으면 true,없으면 false반환
+	public boolean isExistingId(String id) {
+		boolean find = false;
+		String sql = "select * from member where id=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		conn = db.getConnection();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			// 바인딩
+			pstmt.setString(1, id);
+			// 실행
+			rs = pstmt.executeQuery();
+
+			if (rs.next())// 해당 아이디가 있을경우 true
+				find = true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+
+		return find;
+	}
+
+	public boolean isExistingNick(String nick) {
+		boolean find = false;
+		String sql = "select * from member where nickname=?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		conn = db.getConnection();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			// 바인딩
+			pstmt.setString(1, nick);
+			// 실행
+			rs = pstmt.executeQuery();
+
+			if (rs.next())// 해당 아이디가 있을경우 true
+				find = true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+
+		return find;
+	}
+
+	public boolean isLogin(String id, String pw) {
+		boolean find = false;
+		String sql = "select * from member where id=? and password=?";
+
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		conn = db.getConnection();
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
+			ps.setString(2, pw);
+
+			if (rs.next()) {
+				find = true;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, ps, conn);
+		}
+		return find;
+
+	}
+}
