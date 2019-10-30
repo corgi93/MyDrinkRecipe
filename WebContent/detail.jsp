@@ -10,7 +10,7 @@
 	href="/MyDrinkRecipe/resources/css/detail.css">
 </head>
 
-<%@include file="./includes/header.jsp"%>
+<%@include file="./views/includes/header.jsp"%>
 
 <body>
 <div class="recipe_head">
@@ -57,7 +57,7 @@
 </div>
 <div class="recipe_tip">
 	<div>나만의 꿀팁</div>
-	<p class="tip_content"></p>
+	<p class="tip_content">스키틀즈를 좋아하는 사람은 스키틀즈 토핑을 넣어보세요</p>
 </div>
 <div class="answer_comment">
 	<div class="comment_subject">한 줄 댓글</div>
