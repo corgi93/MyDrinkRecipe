@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 
-<%@include file="./includes/header.jsp"%>
+<%@include file="./views/includes/header.jsp"%>
 
 <style type="text/css">
 #container {
@@ -358,8 +358,10 @@ to {
 						<i class="fas fa-hourglass-half"></i>&nbsp;분
 					</div>
 				</div>
-			</div>create
+			</div>
+		</div>
 	</div>
+
 
 	<footer> 사업자: team_Acorn </footer>
 

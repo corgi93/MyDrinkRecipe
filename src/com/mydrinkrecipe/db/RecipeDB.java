@@ -24,7 +24,7 @@ public class RecipeDB {
 			ps.setString(3, dto.getIngredient());
 			ps.setString(4, dto.getTime());
 			ps.setString(5, dto.getPrice());
-			ps.setString(6, dto.getLikecount());
+			ps.setInt(6, dto.getLikecount());
 			ps.setString(7, dto.getKcal());
 			ps.setString(8, dto.getImg());
 
