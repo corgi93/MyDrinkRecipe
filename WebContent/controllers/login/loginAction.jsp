@@ -19,12 +19,8 @@
 		String idsave = request.getParameter("idsave");
 
 		// member DB에서 id, pw
-
 		MemberDB db = new MemberDB();
 		MemberDto dto = db.getLoginData(id);
-
-		System.out.println(dto.getId() + "/" + id);
-		System.out.println(dto.getPassword() + "/" + pw);
 
 		if (id.equals(dto.getId())) {
 			if (pw.equals(dto.getPassword())) {
@@ -38,7 +34,7 @@
 	%>
 	<script type="text/javascript">
 		alert("인증완료!")
-		location.href = "../main.jsp";
+		location.href = "../../main.jsp";
 	</script>
 
 	<%
@@ -47,7 +43,7 @@
 
 	<script type="text/javascript">
 		alert("비밀번호가 다릅니다.")
-		location.href = "../views/login.jsp"
+		location.href = "../../views/login.jsp"
 	</script>
 	<%
 		}
@@ -55,7 +51,7 @@
 	%>
 	<script type="text/javascript">
 		alert("아이디가 다릅니다.");
-		location.href = "../views/login.jsp"
+		location.href = "../../views/login.jsp"
 	</script>
 	<%
 		}

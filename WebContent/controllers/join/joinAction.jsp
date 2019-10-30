@@ -12,9 +12,9 @@
 <body>
 	<%
 		request.setCharacterEncoding("utf-8");
-	
+
 		response.setContentType("application/json");
-	
+
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String pw_chk = request.getParameter("pw_check");
@@ -31,9 +31,8 @@
 
 		db.registerMember(dto);
 
-		out.write("<script>");
-		out.write("alert('회원가입 성공!'); location.href='../main.jsp';");
-		out.write("</script>");
+		response.sendRedirect("../../main.jsp");
+
 	%>
 </body>
 </html>

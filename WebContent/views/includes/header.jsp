@@ -11,29 +11,46 @@
 	href="https://fonts.googleapis.com/css?family=Anton|Jomolhari|Sunflower:300&display=swap"
 	rel="stylesheet">
 
-<link rel="stylesheet" type="text/css"
-	href="/MyDrinkRecipe/resources/css/header.css">
-<link rel="stylesheet" type="text/css"
-	href="/MyDrinkRecipe/resources/css/register.css">
-<link rel="stylesheet" type="text/css"
-	href="/MyDrinkRecipe/resources/css/userform.css">
+<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/header.css">
+<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/register.css">
+<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/userform.css">
+<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/myPage.css">
 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
 </head>
 <body>
+	<%
+		String id = (String) session.getAttribute("id");
+	%>
+
 	<header>
 		<div class="header-container">
 			<div class="logo">
 				<a href="/MyDrinkRecipe/main.jsp"><img
 					style="width: 100px; height: 100%;"
-					src="resources/img/mdr_logo.png"></a>
+					src="/MyDrinkRecipe/resources/img/mdr_logo.png"></a>
 			</div>
 
 			<div class="user_area">
 				<ul>
 					<li class="register"><a
 						href="/MyDrinkRecipe/views/register.jsp">레시피등록</a></li>
+					<%
+						if (id == null) {
+					%>
 					<li class="login"><a href="/MyDrinkRecipe/views/login.jsp">로그인</a></li>
+					<%
+						} else {
+					%>
+					<li class="login" id="logOn"><b><%=id%>님</b>
+						<ul class="logOn-list">
+							<li class="logOns"><a href="/MyDrinkRecipe/views/myPage.jsp">마이페이지</a></li>
+							<li class="logOns"><a
+								href="/MyDrinkRecipe/controllers/login/logoutAction.jsp">로그아웃</a></li>
+						</ul></li>
+					<%
+						}
+					%>
 				</ul>
 			</div>
 		</div>

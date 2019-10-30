@@ -47,53 +47,52 @@
 
 	function checkId() {
 		var userId = $("#userId").val();
-		$.ajax({
-				url : '../controllers/joinCheckID.jsp',
-				type : 'get',
-				data : {
-					"userId" : userId
-				},
-				success : function(data) {
-					var isExist = $(data).find('Exist').text();
-					var str = '';
-					if (isExist == 'true') {
-						var str = "<div style='color: red; font-size: 5px;'>이미 사용중인 아이디입니다.</div>"
-						$("#idCheck").html(str);
-					} else {
-						var str = "<div style='color: green; font-size: 5px;'>사용 가능한 아이디입니다.</div>"
-						$("#idCheck").html(str);
+		$
+				.ajax({
+					url : '../controllers/joinCheckID.jsp',
+					type : 'get',
+					data : {
+						"userId" : userId
+					},
+					success : function(data) {
+						var isExist = $(data).find('Exist').text();
+						var str = '';
+						if (isExist == 'true') {
+							var str = "<div style='color: red; font-size: 5px;'>이미 사용중인 아이디입니다.</div>"
+							$("#idCheck").html(str);
+						} else {
+							var str = "<div style='color: green; font-size: 5px;'>사용 가능한 아이디입니다.</div>"
+							$("#idCheck").html(str);
+						}
 					}
-				}
-			})
+				})
 	}
 
 	function checkNick() {
 		var userNick = $("#userNick").val();
 		$.ajax({
-				url : '../controllers/joinCheckNick.jsp',
-				type : 'get',
-				data : {
-					"userNick" : userNick
-				},
-				success : function(data) {
-					var isExist = $(data).find('Exist').text();
-					var str = '';
-					if (isExist == 'true') {
-						var str = "<div style='color: red; font-size: 5px;'>이미 사용중인 닉네임입니다.</div>"
-						$("#nickCheck").html(str);
-					} else {
-						var str = "<div style='color: green; font-size: 5px;'>사용 가능한 닉네임입니다.</div>"
-						$("#nickCheck").html(str);
+					url : '../controllers/joinCheckNick.jsp',
+					type : 'get',
+					data : {
+						"userNick" : userNick
+					},
+					success : function(data) {
+						var isExist = $(data).find('Exist').text();
+						var str = '';
+						if (isExist == 'true') {
+							var str = "<div style='color: red; font-size: 5px;'>이미 사용중인 닉네임입니다.</div>"
+							$("#nickCheck").html(str);
+						} else {
+							var str = "<div style='color: green; font-size: 5px;'>사용 가능한 닉네임입니다.</div>"
+							$("#nickCheck").html(str);
+						}
 					}
-				}
-		})
+				})
 	}
 
 	function checkPw() {
-		var p1 = $("#userPW").val();
+		var p1 = $("#userPw").val();
 		var p2 = $("#pw_check").val();
-		var out = document.createElement('div');
-		var state = $("pw_check").next();
 		if (p1 != p2) {
 			alert("두 비밀번호가 일치하지 않습니다.")
 		} else {

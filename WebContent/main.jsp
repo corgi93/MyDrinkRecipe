@@ -6,7 +6,7 @@
 <style type="text/css">
 #container {
 	margin: 0 auto;
-	width: 70%;
+	width: 850px;
 }
 
 .mainimg {
@@ -137,12 +137,12 @@ to {
 			<div class="slides fade">
 				<img style="width: 100%; height: 500px;" src="resources/img/3.jpg">
 			</div>
-			<div style="text-align: center">
+			<div style="text-align: center; margin-top: -25px;">
 				<span class="dot"></span> <span class="dot"></span> <span
 					class="dot"></span>
 			</div>
 		</div>
-		<div class="btn" style="text-align: center;">
+		<div class="btn" style="text-align: center; margin-top: 10px;">
 			<a href="#"><button class="button button1">레시피만들기</button></a>
 		</div>
 

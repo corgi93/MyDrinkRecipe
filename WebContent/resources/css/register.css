@@ -2,7 +2,7 @@
 
 div#register_area {
 	margin: 0 auto;
-	width: 40%;
+	width: 800px;
 }
 
 form>div {
@@ -10,26 +10,48 @@ form>div {
 	line-height: 30px;
 }
 
+h2, h3 {
+	font-family: 'Sunflower';
+}
+
+h3{
+	color: #fe850e;
+}
+
 input.register_input {
-	float: right;
-	width: 70%;
-	height: 30px;
+	width: 500px;
+	height: 40px;
+}
+
+textarea {
+	width: 500px;
+	height: 100px;
+	resize: none;
 }
 
 div.form_btns {
 	text-align: center;
+	width : 500px;
 }
+
 
 button.btns {
 	border-radius: 1.0em;
-	border: solid 1px #ff0000;
+	border: solid 1px #fe850e;
 	background-color: white;
 	margin: 0 auto;
 	height: 40px;
 	width: 70px;
+}
 
+button#complete {
+	float: right;
+}
+button#back{
+	float: left
+}
 
 .btns:hover {
-	background-color: red;
+	background-color: #fe850e;
 	color: white;
 }

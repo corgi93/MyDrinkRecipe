@@ -7,7 +7,7 @@
 	<h2>로그인</h2>
 
 	<div class="form-body">
-		<form action="../controllers/loginAction.jsp" method="post">
+		<form action="../controllers/login/loginAction.jsp" method="post">
 			<div>
 				<div class="text">아이디 입력</div>
 				<input class="login_form" type="text" name="id" placeholder="아이디 입력">

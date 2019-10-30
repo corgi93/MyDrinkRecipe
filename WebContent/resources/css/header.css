@@ -17,16 +17,14 @@ header {
 	border: 1px solid #eeeeee;
 }
 
-div.header-container{
+div.header-container {
 	width: 85%;
 	margin: 0 auto;
 }
 
-a{
+a {
 	text-decoration: none;
-	color : #000000;
-	
-	
+	color: #000000;
 }
 
 div.logo {
@@ -53,4 +51,29 @@ div.user_area ul {
 div.user_area ul li {
 	display: inline;
 	margin-left: 15px;
+}
+
+ul.logOn-list {
+	display: none;
+	position: absolute;
+	top: 45px;
+	right: 35px;
+	width: 100px;
+	border: 1px solid #ddd;
+	background: white;
+	color: #000;
+	text-align: center;
+}
+
+li#logOn:hover ul.logOn-list {
+	display: block;
+}
+
+li.logOns {
+	position: relative;
+}
+
+li.logOns:hover {
+	color: red;
+	border : 1px solid green;
 }
