@@ -2,7 +2,9 @@ package com.mydrinkrecipe.dto;
 
 public class RecipeDto {
 	private int bno;
+	private String title;
 	private String content;
+	private String ingredient;
 	private String time;
 	private String price;
 	private int likecount;
@@ -15,11 +17,23 @@ public class RecipeDto {
 	public void setBno(int bno) {
 		this.bno = bno;
 	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public String getContent() {
 		return content;
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public String getIngredient() {
+		return ingredient;
+	}
+	public void setIngredient(String ingredient) {
+		this.ingredient = ingredient;
 	}
 	public String getTime() {
 		return time;
@@ -52,4 +66,3 @@ public class RecipeDto {
 		this.img = img;
 	}
 }
-	

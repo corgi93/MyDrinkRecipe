@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 
-<%@include file="./views/includes/header.jsp"%>
+<%@include file="./includes/header.jsp"%>
 
 <style type="text/css">
 #container {
@@ -148,6 +148,8 @@ to {
 
 		<b>최신레시피</b>
 
+
+		<!-- 이 밑부분을 form으로 만들어야함 -->
 		<div class="recipes">
 			<div class="recipe_card">
 				<div class="card_img">

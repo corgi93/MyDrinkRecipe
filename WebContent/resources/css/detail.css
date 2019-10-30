@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.recipe_creater{
+	text-align: center;
+}
+
+.recipe_head {
+	/* border: 1px solid red; */
+	width: 700px;
+	height: 312px;
+	margin: 0 auto; /* 크기가 정해진 div(block 인 태그) 중앙정렬 */
+	padding: 20px;
+	display: flex; /* 작성자 영역 옆으로 눕힘 */
+	justify-content: space-between;
+	<!--공간사이띄움-->
+}
+  
+.recipe_head .image {
+	width: 335px;
+	height: 300px;
+	border: 1px solid blue;
+	float: left;
+}
+
+.recipe_head .recipe_main {
+	width: 335px;
+	height: 300px;
+	/* border: 1px solid purple; */
+	float: left;
+}
+
+.recipe_name_bar {
+	padding:20px;
+	display: flex; /* 작성자 영역 옆으로 눕힘 */
+	justify-content: space-between;<!--공간사이띄움-->
+}
+.recipe_name h2{
+	border-bottom: 2px solid black;
+	padding-bottom: 5px;
+}
+.head_profil{
+	width: 80px;
+	height:80px;
+	border: 1px solid green;
+	border-radius: 50%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.recipe_ingre{
+	padding:0px 20px;
+}
+.ingre_top{
+	border-top: 2px solid gray;
+	padding-top: 5px;
+}
+.recipe_info {
+	width: 700px;
+	height: 200px;
+	/* border: 1px solid #DDD; */
+	border-top: 2px solid #DDD;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.img_box {
+	width: 150px;
+	height: 200px;
+/* 	border: 1px solid red; */
+	text-align: center;
+}
+
+.img_box .img {
+	width:100%;
+	/* border: 1px solid black; */
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;  /* 영역에서 넘치는 부분 바깥영역 자동 잘림 */
+}
+
+.recipe_tip {
+	width: 700px;
+	height: 100px;
+	/* border: 1px solid gray; */
+	border-top: 2px solid #DDD;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.recipe_tip .tip_content {
+	width: 655px;
+	height: 50px;
+	border: 1px solid gray;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.answer_comment {
+	width: 700px;
+	height: 300px;
+	/* border: 1px solid gray; */
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.answer_profil_img {
+	width: 60px;
+	height: 60px;
+	border: 1px solid green;
+	border-radius: 50%;
+	margin: 0 auto;
+	overflow: hidden;
+	float: left;
+}
+
+.answer_info {
+	width: 615px;
+	height: 100px;
+	border: 1px solid gray;
+	border-top: 2px solid gray;
+	margin: 0 auto;
+	overflow: hidden;
+	float: right;
+}
+
+.answer_nickname {
+	width: 100px;
+	height: 20px;
+	border: 1px solid gray;
+	margin: 0 auto;
+	float: left;
+}
+
+.answer_writeday {
+	width: 100px;
+	height: 20px;
+	border: 1px solid gray;
+	margin: 0 auto;
+	float: left;
+}
+
+.input_content {
+	width: 480px;
+	height: 70px;
+	border: 1px solid gray;
+	margin: 0 auto;
+}
+
+ul li {
+	list-style: none;
+	/* ul li 에 있는 점 제거  */
+}
+
+.answer_input {
+	width: 615px;
+	height: 30px;
+	border: 1px solid green;
+}
+
+.comment_box {
+	width: 615px;
+	height: 70px;
+	border: 1px solid purple;
+}
+
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.btn2 {
+	border-radius: 4px;
+}
+
+.old_comment {
+	width: 700px;
+	height: 100px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+.comment_subject {
+	width: 655px;
+	height: 10px;
+	border: 1px solid gray;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.new_comment {
+	width: 700px;
+	height: 100px;
+	border: 1px solid gray;
+	margin: 0 auto;
+}
