@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/register.css">
 <link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/userform.css">
 <link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/myPage.css">
+<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/main.css">
 
 
 </head>
