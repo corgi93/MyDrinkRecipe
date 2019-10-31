@@ -1,9 +1,19 @@
+<%@page import="com.mydrinkrecipe.dto.RecipeDto"%>
+<%@page import="com.mydrinkrecipe.db.RecipeDB"%>
+
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 
 <%@include file="./views/includes/header.jsp"%>
 
-</head>
+</head> <%
+	//db 선언
+	RecipeDB db=new RecipeDB();
+	//list 가져오기
+	List<RecipeDto> list=db.getAllDatas();
+	
+%>
 <body>
 	<div id="container">
 		<div class="slideshow-container">
@@ -22,7 +32,7 @@
 			</div>
 		</div>
 		<div class="btn" style="text-align: center; margin-top: 10px;">
-			<a href="#"><button class="button button1">레시피만들기</button></a>
+			<a href="./views/register.jsp"><button class="button button1">레시피만들기</button></a>
 		</div>
 
 		<b>최신레시피</b>
