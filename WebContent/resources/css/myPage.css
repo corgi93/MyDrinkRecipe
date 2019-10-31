@@ -19,6 +19,11 @@ div#myPage_container {
 	width: 100%;
 	height: 200px;
 	width: 100%;
+	background-color: white;
+}
+
+span { 1
+	margin-left: 20px;
 }
 
 .right_infos {
@@ -32,6 +37,25 @@ img.user_thumbnail {
 	height: 150px;
 }
 
+button.modify_profile {
+	width: 200px;
+	background-color: #fe850e;
+	border: none;
+	border-radius: 0.8em;
+	color: #fff;
+	margin-top: 30px;
+}
+
+button.modify_profile:hover {
+	width: 200px;
+	background-color: #ff6633;
+	border: none;
+	border-radius: 0.8em;
+	color: #fff;
+	margin-top: 30px;
+}
+
+/* tab영역 */
 .tab {
 	border: 1px solid #dedede;
 	width: 100%;
@@ -54,4 +78,9 @@ img.user_thumbnail {
 button {
 	width: 120px;
 	height: 30px;
+}
+
+/* modal 영역  */
+.hidden {
+	display: none;
 }

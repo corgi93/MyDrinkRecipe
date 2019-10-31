@@ -12,9 +12,14 @@
 				</div>
 				<div class="right_infos">
 					<h2>corgi93</h2>
-					<span>팔로잉</span> <span>팔로워</span>
 					<div>
-						<button>프로필 수정</button>
+						<span>팔로잉</span> <span style="padding-left: 50px;">팔로워</span>
+					</div>
+					<div>
+						<span>0명</span> <span style="padding-left: 75px;">0명</span>
+					</div>
+					<div>
+						<button class="modify_profile">프로필 수정</button>
 					</div>
 				</div>
 			</div>
@@ -35,6 +40,25 @@
 			</section>
 		</div>
 	</div>
+
+	<div>
+		<div class="modal hidden">
+			<div class="model_overlay"></div>
+			<div class="modal_content">
+				<h1>회원정보 수정</h1>
+				<input type="text" placeholder="아이디 수정하시겠습니까?"> <input
+					type="text" placeholder="닉네임 수정하시겠습니까?"> <input type="text"
+					placeholder="비밀번호 수정하시겠습니까?">
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		// modal창
+
+		const over
+	</script>
 
 	<script>
 		function makeTemplate(data, clickedName) {
@@ -73,6 +97,8 @@
         <h4>title : {title}</h4>
         <p>{ingredients}</p>
     </script>
+
+
 </body>
 </html>
 

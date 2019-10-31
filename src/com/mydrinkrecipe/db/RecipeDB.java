@@ -149,6 +149,41 @@ public class RecipeDB {
 		return list;
 	}
 
+	public RecipeDto getDetail(int bno) {
+		RecipeDto dto = new RecipeDto();
+
+		String sql = "select * from recipe where bno=?";
+
+		Connection conn = db.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, bno);
+
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				dto.setBno(rs.getInt("bno"));
+				dto.setTitle(rs.getString("title"));
+				dto.setContent(rs.getString("content"));
+				dto.setIngredient(rs.getString("ingredient"));
+				dto.setTime(rs.getString("time"));
+				dto.setPrice(rs.getString("price"));
+				dto.setLikecount(rs.getInt("likecount"));
+				dto.setKcal(rs.getString("kcal"));
+				dto.setImg(rs.getString("img"));
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, ps, conn);
+		}
+
+		return dto;
+
+	}
 }
 
 

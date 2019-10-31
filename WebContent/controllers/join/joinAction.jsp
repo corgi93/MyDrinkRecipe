@@ -13,8 +13,6 @@
 	<%
 		request.setCharacterEncoding("utf-8");
 
-		response.setContentType("application/json");
-
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String pw_chk = request.getParameter("pw_check");
