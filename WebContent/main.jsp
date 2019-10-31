@@ -1,10 +1,20 @@
+<%@page import="java.util.Vector"%>
+<%@page import="com.mydrinkrecipe.dto.RecipeDto"%>
+<%@page import="java.util.List"%>
+<%@page import="com.mydrinkrecipe.db.RecipeDB"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-
 <%@include file="./views/includes/header.jsp"%>
 
 </head>
 <body>
+	<%
+		RecipeDB db = new RecipeDB();
+		List<RecipeDto> list = new Vector<RecipeDto>();
+
+		list = db.getCardList();
+	%>
+
 	<div id="container">
 		<div class="slideshow-container">
 			<div class="slides fade">
@@ -25,11 +35,44 @@
 			<a href="#"><button class="button button1">레시피만들기</button></a>
 		</div>
 
-		<b>최신레시피</b>
-
+		<h2>최신레시피</h2>
 
 		<!-- 이 밑부분을 form으로 만들어야함 -->
 		<div class="recipes">
+			<%
+				for (RecipeDto dto : list) {
+			%>
+
+			<div class="recipe_card">
+				<div class="card_img">
+					<a class="card1" href="./detail.jsp?bno=<%=dto.getBno()%>"> <img src="r_thumbnail/<%=dto.getImg()%>">
+					</a> <a class="card2"> <img src="resources/img/love.jpg">
+					</a>
+				</div>
+				<div style="text-align: center;">
+					<p>
+						<a class="card3"><b>닉네임</b></a>
+					</p>
+					<p>
+						<a class="card4"><%=dto.getTitle()%></a>
+					</p>
+					<p>
+						<a class="card5"><%=dto.getBno()%></a>
+					</p>
+				</div>
+				<div class="option">
+					<div class="option1">
+						<i class="fas fa-heart"></i>&nbsp;<%=dto.getLikecount() %>명
+					</div>
+					<div class="option2">
+						<i class="fas fa-hourglass-half"></i>&nbsp;<%=dto.getTime()%>
+					</div>
+				</div>
+			</div>
+			<%
+				}
+			%>
+
 			<div class="recipe_card">
 				<div class="card_img">
 					<a class="card1"> <img src="resources/img/drop.jpg">
@@ -41,10 +84,10 @@
 						<a class="card3"><b>닉네임</b></a>
 					</p>
 					<p>
-						<a class="card4">제목</a>
+						<a class="card4">타이틀</a>
 					</p>
 					<p>
-						<a class="card5">메인재료</a>
+						<a class="card5">재료</a>
 					</p>
 				</div>
 				<div class="option">
@@ -56,6 +99,10 @@
 					</div>
 				</div>
 			</div>
+
+
+
+
 			<div class="recipe_card">
 				<div class="card_img">
 					<a class="card1"> <img src="resources/img/drop.jpg">
@@ -243,6 +290,7 @@
 
 
 	<footer> 사업자: team_Acorn </footer>
+
 
 	<script type="text/javascript">
 		var slide_idx = 0;
