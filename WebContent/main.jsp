@@ -1,128 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 
-<%@include file="./includes/header.jsp"%>
-
-<style type="text/css">
-#container {
-	margin: 0 auto;
-	width: 850px;
-}
-
-.mainimg {
-	height: 500px;
-	border: solid 1px;
-}
-
-.button {
-	background-color: #f44336;
-	border: none;
-	color: white;
-	padding: 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	border-radius: 20px;
-}
-
-.recipes {
-	
-}
-
-.recipe_card {
-	display: inline-block;
-	margin: 0px 10px 10px 00px;
-	padding: 10px;
-	width: 200px;
-	height: 350px;
-	border: 1px solid black;
-}
-
-img {
-	vertical-align: center;
-}
-
-p {
-	margin: 0;
-	padding: 5px;
-}
-
-.card_img {
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-	width: 200px;
-}
-
-.card1 img {
-	margin: 0 auto;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 100%;
-}
-
-.card2 {
-	margin-top: -40px;
-	display: inline-block;
-}
-
-.card2 img {
-	position: relative;
-	overflow: hidden;
-	border-radius: 50%;
-	width: 70px;
-	height: 70px;
-}
-
-.option1 {
-	float: left;
-	margin-left: 20px;
-	padding: 10px;
-}
-
-.option2 {
-	float: right;
-	margin-right: 20px;
-	padding: 10px;
-}
-
-/*
- banner 애니메이션 css
-*/
-.
-dot {
-	height: 15px;
-	width: 15px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-}
-
-.active {
-	background-color: #7171ff;
-}
-
-/* fade animation*/
-.fade {
-	animation-name: fade;
-	animation-duration: 2.0s;
-}
-
-@
-keyframes fade {
-	from {opacity: .4
-}
-
-to {
-	opacity: 1
-}
-}
-</style>
+<%@include file="./views/includes/header.jsp"%>
 
 </head>
 <body>
@@ -358,8 +237,10 @@ to {
 						<i class="fas fa-hourglass-half"></i>&nbsp;분
 					</div>
 				</div>
-			</div>create
+			</div>
+		</div>
 	</div>
+
 
 	<footer> 사업자: team_Acorn </footer>
 
@@ -373,7 +254,6 @@ to {
 			// slides와 dots element를 DOM에서 가져옴
 			var slides = document.getElementsByClassName("slides");
 			var dots = document.getElementsByClassName("dot");
-			console.log(dots);
 
 			for (var i = 0; i < slides.length; i++) {
 				slides[i].style.display = "none";
