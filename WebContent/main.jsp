@@ -1,3 +1,4 @@
+
 <%@page import="java.util.Vector"%>
 <%@page import="com.mydrinkrecipe.dto.RecipeDto"%>
 <%@page import="java.util.List"%>
@@ -6,7 +7,13 @@
 	pageEncoding="utf-8"%>
 <%@include file="./views/includes/header.jsp"%>
 
-</head>
+</head> <%
+	//db 선언
+	RecipeDB db=new RecipeDB();
+	//list 가져오기
+	List<RecipeDto> list=db.getAllDatas();
+	
+%>
 <body>
 	<%
 		RecipeDB db = new RecipeDB();
@@ -32,7 +39,7 @@
 			</div>
 		</div>
 		<div class="btn" style="text-align: center; margin-top: 10px;">
-			<a href="#"><button class="button button1">레시피만들기</button></a>
+			<a href="./views/register.jsp"><button class="button button1">레시피만들기</button></a>
 		</div>
 
 		<h2>최신레시피</h2>

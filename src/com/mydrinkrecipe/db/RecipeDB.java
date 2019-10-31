@@ -38,6 +38,43 @@ public class RecipeDB {
 			db.dbClose(ps, conn);
 		}
 	}
+	
+	//전체데이터를 list에 담아 리턴하는 메소드
+	public List<RecipeDto>getAllDatas()
+	{
+		List<RecipeDto> list=new Vector<RecipeDto>();
+		String sql="select * from recipe order by bno desc";
+		Connection conn = db.getConnection();
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		
+		conn=db.getConnection();
+		try {
+			ps=conn.prepareStatement(sql);
+			rs=ps.executeQuery();
+			while(rs.next())
+			{
+				RecipeDto dto=new RecipeDto();
+				dto.setBno(rs.getInt("bno"));
+				dto.setTitle(rs.getString("title"));
+				dto.setContent(rs.getString("content"));
+				dto.setIngredient(rs.getString("ingredient"));
+				dto.setTime(rs.getString("time"));
+				dto.setPrice(rs.getString("price"));
+				dto.setLikecount(rs.getInt("likecount"));
+				dto.setKcal(rs.getString("kcal"));
+				dto.setImg(rs.getString("img"));
+				
+				list.add(dto);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, ps, conn);
+		}
+		return list;
+	}
 
 	public List<RecipeDto> getList() {
 		String sql = "select * from recipe order by bno asc";
@@ -113,3 +150,22 @@ public class RecipeDB {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
