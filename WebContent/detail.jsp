@@ -16,6 +16,7 @@
 <%
 	String root = request.getContextPath();
 %>
+
 <body>
 	<div class="recipe_head">
 		<div class="image">
@@ -87,7 +88,7 @@
 						accept-charset="UTF-8" method="post">
 						<input class="input_content" type="text" name="content"
 							id="content" placeholder="한 줄 댓글을 남겨주세요" />
-						<button type="submit" id="btnsave" class="button btn2">댓글남기기</button>
+						<button type="submit" id="btnsave" class="btn2">댓글남기기</button>
 					</form>
 				</div>
 			</div>
