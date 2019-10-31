@@ -5,12 +5,11 @@ html, body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #ffffff;
+	background-color: #f5f5f5;
 }
 
 header {
 	width: 100%;
-	border: 1px solid #eeeeee;
 	background-color: #fff;
 	padding: 10px 0 10px 0;
 	height: 45px;
@@ -42,6 +41,11 @@ div.user_area {
 	float: right;
 }
 
+.root-ul>li {
+	display: inline;
+	margin-left: 20px;
+}
+
 div.user_area ul {
 	list-style: none;
 	margin: 0;
@@ -49,8 +53,7 @@ div.user_area ul {
 }
 
 div.user_area ul li {
-	display: inline;
-	margin-left: 15px;
+	
 }
 
 ul.logOn-list {
@@ -63,6 +66,7 @@ ul.logOn-list {
 	background: white;
 	color: #000;
 	text-align: center;
+	padding: 0;
 }
 
 li#logOn:hover ul.logOn-list {
@@ -75,5 +79,5 @@ li.logOns {
 
 li.logOns:hover {
 	color: red;
-	border : 1px solid green;
+	border: 1px solid green;
 }
