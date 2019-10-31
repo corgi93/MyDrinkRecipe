@@ -49,7 +49,7 @@
 		var userId = $("#userId").val();
 		$
 				.ajax({
-					url : '../controllers/joinCheckID.jsp',
+					url : '../controllers/join/joinCheckID.jsp',
 					type : 'get',
 					data : {
 						"userId" : userId
@@ -71,7 +71,7 @@
 	function checkNick() {
 		var userNick = $("#userNick").val();
 		$.ajax({
-					url : '../controllers/joinCheckNick.jsp',
+					url : '../controllers/join/joinCheckNick.jsp',
 					type : 'get',
 					data : {
 						"userNick" : userNick

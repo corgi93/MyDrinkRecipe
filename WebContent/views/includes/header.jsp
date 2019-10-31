@@ -11,11 +11,16 @@
 	href="https://fonts.googleapis.com/css?family=Anton|Jomolhari|Sunflower:300&display=swap"
 	rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/header.css">
-<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/register.css">
-<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/userform.css">
-<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/myPage.css">
-<link rel="stylesheet" type="text/css" href="/MyDrinkRecipe/resources/css/main.css">
+<link rel="stylesheet" type="text/css"
+	href="/MyDrinkRecipe/resources/css/header.css">
+<link rel="stylesheet" type="text/css"
+	href="/MyDrinkRecipe/resources/css/register.css">
+<link rel="stylesheet" type="text/css"
+	href="/MyDrinkRecipe/resources/css/userform.css">
+<link rel="stylesheet" type="text/css"
+	href="/MyDrinkRecipe/resources/css/myPage.css">
+<link rel="stylesheet" type="text/css"
+	href="/MyDrinkRecipe/resources/css/main.css">
 
 
 </head>
@@ -33,7 +38,7 @@
 			</div>
 
 			<div class="user_area">
-				<ul>
+				<ul class="root-ul">
 					<li class="register"><a
 						href="/MyDrinkRecipe/views/register.jsp">레시피등록</a></li>
 					<%
