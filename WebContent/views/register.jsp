@@ -12,12 +12,16 @@
 			<input class="register_input" type="text" name='title' placeholder="레시피 이름을 작성해주세요" />
 		</div>
 		<div>
-			<h3>소요 시간</h3>
-			<input class="register_input" type="text" name='time' placeholder="제조 시간을 작성해주세요"/>
-		</div>
-		<div>
 			<h3>재	 료</h3>
 			<input class="register_input" type="text" name='ingredient' placeholder="재료 이름을 작성해주세요"/>
+		</div>
+		<div>
+			<h3>가격</h3>
+			<input class="register_input" type="text" name='price' placeholder="가격을 작성해주세요"/>
+		</div>
+		<div>
+			<h3>소요 시간</h3>
+			<input class="register_input" type="text" name='time' placeholder="제조 시간을 작성해주세요"/>
 		</div>
 		<div>
 			<h3>kcal</h3> 
