@@ -13,6 +13,11 @@
 
 <%@include file="./views/includes/header.jsp"%>
 
+</head>
+<%
+	String root = request.getContextPath();
+%>
+
 <body>
 
 	<%
@@ -74,38 +79,81 @@
 		</div>
 	</div>
 
-
 	<div class="recipe_tip">
-		<div>나만의 꿀팁</div>
-		<p class="tip_content"><%=dto.getContent()%></p>
+		<div class="tip">
+			<strong>나만의 꿀팁<strong></strong>
+		</div>
+		<p class="tip_content">스키틀즈를 좋아하는 사람은 스키틀즈 토핑을 넣어보세요</p>
 	</div>
 	<div class="answer_comment">
 		<div class="comment_subject">한 줄 댓글</div>
-		<div class="new_comment">
-			<span class="answer_profil_img">image</span>
-			<div class="answer_info">
-				<div class="answer_nickname">nickname</div>
-				<div class="answer_writeday">writeday</div>
-				<div class="answer_input"></div>
-				<form class="comment_box" id="comment_form" action="./controllers/comments/commentAction.jsp"
-					accept-charset="UTF-8" method="post">
-					<input class="input_content" type="text" name="content"
-						placeholder="한 줄 댓글을 남겨주세요" />
-					<button type="submit" id="btnsave" class="btn2">댓글남기기</button>
-				</form>
-			</div>
-		</div>
+		<div id="comment_box">
 			<div class="new_comment">
+				<span class="answer_profil_img">image</span>
+				<div class="answer_info">
+					<div class="answer_nickname">nickname</div>
+					<div class="answer_writeday">writeday</div>
+					<div class="answer_input"></div>
+					<form class="comment_box" id="comment_form"
+						action="./controllers/comments/commentAction.jsp"
+						accept-charset="UTF-8" method="post">
+						<input class="input_content" type="text" name="content"
+							id="content" placeholder="한 줄 댓글을 남겨주세요" /> 
+						<input type="hidden" name="r_bno" value="<%=dto.getBno()%>">
 
-		<div class="old_comment">
-			<span class="answer_profil_img" id="img">image</span>
-			<div class="answer_info">
-				<div class="answer_nickname"  id="nickname">nickname</div>
-				<div class="answer_writeday">writeday</div>
-				<div class="answer_input" id="out1"></div>
-				<p class="comment_box"></p>
+						<button type="submit" id="btnsave" class="btn2">댓글남기기</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="old_comment">
+				<span class="answer_profil_img" id="img">image</span>
+				<div class="answer_info">
+					<div class="answer_nickname" id="nickname">nickname</div>
+					<div class="answer_writeday">writeday</div>
+					<div class="answer_input" id="out1"></div>
+					<p class="user_comment"></p>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			//처음 시작시 메모리스트 출력
+			list();
+
+			$("#btnsave").click(function() {
+				var content = $("#content").val();
+
+				if (content == "") {
+					alert("내용을 반드시 입력해주세요"); 
+					return false;
+				}
+
+				$.ajax({
+					type : "post",
+					url : "comments/commentlist.jsp",
+					dataType : "xml",
+					data : {"content" : content},
+					success : function(data) {
+						var str = "";
+						str = $(data).find("commentdata").text();
+						
+						str+="<div style='width:600px;'>";
+                    	str+="<b>"+s.find("content").text()+"</b>";
+                    	str+="</div>";
+                    	
+					}
+					
+              	});
+					list();
+					
+					},
+	
+			});
+	});
+				
+	</script>
 </body>
 </html>
