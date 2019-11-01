@@ -14,7 +14,7 @@
 <body>
 	<%
 		request.setCharacterEncoding("utf-8");
-		String uploadPath = "D:\\workspace\\java\\MyDrinkRecipe\\WebContent\\r_thumbnail\\";
+		String uploadPath = "C:\\Users\\mynam\\eclipse-workspace\\MyDrinkRecipe\\WebContent\\r_thumbnail\\";
 		// String uploadPath = getServletContext().getRealPath("/r_thumbnail/");
 		System.out.print(uploadPath);
 
@@ -27,8 +27,10 @@
 			String title = multi.getParameter("title");
 			String time = multi.getParameter("time");
 			String ingredient = multi.getParameter("ingredient");
+			String price = multi.getParameter("price");
 			String kcal = multi.getParameter("kcal");
 			String content = multi.getParameter("content");
+			
 
 			// 실제 업로드 이미지이름 읽어오기
 			String imgname = multi.getFilesystemName("thumbnail");
@@ -39,6 +41,7 @@
 			dto.setTitle(title);
 			dto.setTime(time);
 			dto.setIngredient(ingredient);
+			dto.setPrice(price);
 			dto.setKcal(kcal);
 			dto.setContent(content);
 			dto.setImg(imgname);
