@@ -39,10 +39,10 @@ public class CommentDB {
 		
 	}
 	//댓글목록반환
-	public List<CommentDto> getCommentList(int bno)
+	public List<CommentDto> getCommentList(int recipe_bno,int bno)
 	{
 		List<CommentDto>list=new Vector<CommentDto>();
-		String sql="select*from comment where recipe_bno=? order by bno desc";
+		String sql="select*from comment where recipe_bno=? & bno=? order by bno desc";
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
@@ -50,7 +50,8 @@ public class CommentDB {
 		try {
 			pstmt=conn.prepareStatement(sql);
 			//바인딩
-			pstmt.setInt(1, bno);
+			pstmt.setInt(1, recipe_bno);
+			pstmt.setInt(2, bno);
 			//실행
 			rs=pstmt.executeQuery();
 			
