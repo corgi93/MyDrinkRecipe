@@ -8,16 +8,13 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	CommentDB db = new CommentDB();
-	String bno = request.getParameter("bno");
+	String comment_bno = request.getParameter("comment_bno");
 	String recipe_bno = request.getParameter("recipe_bno");
 
-	int bno1 = Integer.parseInt(bno);
-	int r_bno = Integer.parseInt(recipe_bno);
-
-	System.out.println("레시피:"+bno1);
-	System.out.println("레시피1:"+r_bno);
+	System.out.println("코멘트bno:"+comment_bno);
+	System.out.println("레시피bno:"+recipe_bno);
 	
-	List<CommentDto> list = db.getCommentList(bno1, r_bno);
+	List<CommentDto> list = db.getCommentList(comment_bno, recipe_bno);
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 %>
 <result> 
@@ -25,9 +22,10 @@
  	for (CommentDto dto : list) {
 %> 
 	<commentdata> 
- 		<bno><%=dto.getBno()%></bno>
+ 		<comment_bno><%=dto.getComment_bno()%></comment_bno>
 		<content><%=dto.getContent()%></content> 
 		<writeday><%=sdf.format(dto.getWriteday())%></writeday>
 	</commentdata> 
 	<%}%> 
  </result>
+	
