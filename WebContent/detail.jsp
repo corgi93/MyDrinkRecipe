@@ -94,15 +94,10 @@
 					<div class="answer_nickname">nickname</div>
 					<div class="answer_writeday">writeday</div>
 					<div class="answer_input"></div>
-					<form class="comment_box" id="comment_form"
-						action="./controllers/comments/commentAction.jsp"
-						accept-charset="UTF-8" method="post">
 						<input class="input_content" type="text" name="content"
 							id="content" placeholder="한 줄 댓글을 남겨주세요" /> 
-						<input type="hidden" name="r_bno" value="<%=dto.getBno()%>">
-
+						<input type="hidden" name="recipe_bno" value="<%=dto.getBno()%>">
 						<button type="submit" id="btnsave" class="btn2">댓글남기기</button>
-					</form>
 				</div>
 			</div>
 
@@ -117,43 +112,5 @@
 			</div>
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		$(function() {
-			//처음 시작시 메모리스트 출력
-			list();
-
-			$("#btnsave").click(function() {
-				var content = $("#content").val();
-
-				if (content == "") {
-					alert("내용을 반드시 입력해주세요"); 
-					return false;
-				}
-
-				$.ajax({
-					type : "post",
-					url : "comments/commentlist.jsp",
-					dataType : "xml",
-					data : {"content" : content},
-					success : function(data) {
-						var str = "";
-						str = $(data).find("commentdata").text();
-						
-						str+="<div style='width:600px;'>";
-                    	str+="<b>"+s.find("content").text()+"</b>";
-                    	str+="</div>";
-                    	
-					}
-					
-              	});
-					list();
-					
-					},
-	
-			});
-	});
-				
-	</script>
 </body>
 </html>
