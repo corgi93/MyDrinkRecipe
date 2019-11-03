@@ -25,7 +25,7 @@ public class CommentDB {
 		try {
 			pstmt=conn.prepareStatement(sql);
 			
-			pstmt.setInt(1, dto.getRecipe_bno());
+			pstmt.setString(1, dto.getRecipe_bno());
 			pstmt.setString(2, dto.getContent());
 			//sql실헹
 			pstmt.execute();
@@ -39,10 +39,10 @@ public class CommentDB {
 		
 	}
 	//댓글목록반환
-	public List<CommentDto> getCommentList(int recipe_bno,int bno)
+	public List<CommentDto> getCommentList(String recipe_bno,String comment_bno)
 	{
 		List<CommentDto>list=new Vector<CommentDto>();
-		String sql="select*from comment where recipe_bno=? & bno=? order by bno desc";
+		String sql="select*from r_comment where recipe_bno=? & comment_bno=? order by comment_bno desc";
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
@@ -50,16 +50,16 @@ public class CommentDB {
 		try {
 			pstmt=conn.prepareStatement(sql);
 			//바인딩
-			pstmt.setInt(1, recipe_bno);
-			pstmt.setInt(2, bno);
+			pstmt.setString(1, recipe_bno);
+			pstmt.setString(2, comment_bno);
 			//실행
 			rs=pstmt.executeQuery();
 			
 			while(rs.next())
 			{
 				CommentDto dto=new CommentDto();
-				dto.setBno(rs.getInt("bno"));
-				dto.setRecipe_bno(rs.getInt("recipe_bno"));
+				dto.setComment_bno(rs.getString("bno"));
+				dto.setRecipe_bno(rs.getString("recipe_bno"));
 				dto.setContent(rs.getString("content"));
 				dto.setWriteday(rs.getTimestamp("writeday"));
 
