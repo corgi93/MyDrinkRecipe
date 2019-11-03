@@ -15,12 +15,6 @@
 	
 %>
 <body>
-	<%
-		RecipeDB db = new RecipeDB();
-		List<RecipeDto> list = new Vector<RecipeDto>();
-
-		list = db.getCardList();
-	%>
 
 	<div id="container">
 		<div class="slideshow-container">
