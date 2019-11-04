@@ -29,6 +29,7 @@
 			String ingredient = multi.getParameter("ingredient");
 			String kcal = multi.getParameter("kcal");
 			String content = multi.getParameter("content");
+			String writer = multi.getParameter("writer");
 
 			// 실제 업로드 이미지이름 읽어오기
 			String imgname = multi.getFilesystemName("thumbnail");
@@ -39,6 +40,7 @@
 			dto.setTitle(title);
 			dto.setTime(time);
 			dto.setIngredient(ingredient);
+			dto.setWriter(writer);
 			dto.setKcal(kcal);
 			dto.setContent(content);
 			dto.setImg(imgname);
