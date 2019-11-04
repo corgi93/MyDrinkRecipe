@@ -7,13 +7,12 @@
 	pageEncoding="utf-8"%>
 <%@include file="./views/includes/header.jsp"%>
 
-</head> <%
-	//db 선언
-	RecipeDB db=new RecipeDB();
-	//list 가져오기
-	List<RecipeDto> list=db.getAllDatas();
-	
-%>
+	<%
+		RecipeDB db = new RecipeDB();
+		List<RecipeDto> list = new Vector<RecipeDto>();
+		list = db.getCardList();
+	%>
+</head>
 <body>
 
 	<div id="container">
