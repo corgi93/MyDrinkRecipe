@@ -22,12 +22,17 @@ div#myPage_container {
 	background-color: white;
 }
 
-span { 1
+span {
 	margin-left: 20px;
 }
 
 .right_infos {
 	margin: 25px 0 0 200px;
+}
+
+.left_infos {
+	position: relative;
+	float: left;
 }
 
 img.user_thumbnail {
@@ -37,13 +42,22 @@ img.user_thumbnail {
 	height: 150px;
 }
 
+img.upload_thumbnail {
+	position: absolute;
+	right: -2px;
+	top: -2px;
+	width: 30px;
+}
+
 button.modify_profile {
 	width: 200px;
+	height: 30px;
 	background-color: #fe850e;
 	border: none;
 	border-radius: 0.8em;
 	color: #fff;
 	margin-top: 30px;
+	background-color: #fe850e;
 }
 
 button.modify_profile:hover {
@@ -72,15 +86,107 @@ button.modify_profile:hover {
 }
 
 .tab_content {
-	
-}
-
-button {
-	width: 120px;
-	height: 30px;
+	background-color: white;
+	padding: 50px 100px;
+	position: relative;
 }
 
 /* modal 영역  */
+.modify_input {
+	width: 300px;
+	height: 35px;
+}
+
+.closebtn, .closebtn2 {
+	float: right;
+	background: #fff;
+	border: none;
+}
+
+.filebox label {
+	display: inline-block;
+	padding: .5em .75em;
+	color: #999;
+	font-size: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #fe8502;
+	color: white;
+	cursor: pointer;
+	border: 1px solid #ebebeb;
+	border-bottom-color: #e2e2e2;
+	border-radius: .25em;
+	float: left;
+}
+
+.filebox #user_img {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+button.complete {
+	float: right;
+	height: 38.89px;
+	color: white;
+	background: #fe8502;
+	border-radius: .25em;
+	border: 1px solid #ebebeb;
+	border-bottom-color: #e2e2e2;
+}
+
+.modify_btn {
+	width: 300px;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.modal2 {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.modal_overlay {
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.complete {
+	float: right;
+}
+
+.modal_content {
+	background-color: white;
+	height: 500px;
+	padding: 50px 100px;
+	text-align: center;
+	position: relative;
+	border-radius: 10px;
+	width: 30%;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
+		rgba(0, 0, 0, 0.23);
+	padding: 50px 100px;
+}
+
 .hidden {
 	display: none;
 }
