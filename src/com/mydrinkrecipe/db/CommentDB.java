@@ -12,64 +12,69 @@ import com.mydrinkrecipe.dto.CommentDto;
 
 public class CommentDB {
 	DbConnect db = new DbConnect();
-	
-	//댓글추가
+
+	// 댓글추가
 	public void insertComment(CommentDto dto) {
-		
-		String sql="insert into r_comment values (seq_comment.nextval,?,?,sysdate)";
-		
-		Connection conn=null;
-		PreparedStatement pstmt=null;
-		conn=db.getConnection();
-		//바인딩
+
+		String sql = "insert into r_comment values (seq_comment.nextval,?,?,?,?,sysdate)";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		conn = db.getConnection();
+		// 바인딩
 		try {
-			pstmt=conn.prepareStatement(sql);
-			
-			pstmt.setInt(1, dto.getRecipe_bno());
-			pstmt.setString(2, dto.getContent());
-			//sql실헹
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setString(1, dto.getRecipe_bno());
+			pstmt.setString(2, dto.getNickname());
+			pstmt.setString(3, dto.getMemberimg());
+			pstmt.setString(4, dto.getContent());
+
+			// sql실헹
 			pstmt.execute();
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
+		} finally {
 			db.dbClose(pstmt, conn);
 		}
-		
+
 	}
-	//댓글목록반환
-	public List<CommentDto> getCommentList(int bno)
-	{
-		List<CommentDto>list=new Vector<CommentDto>();
-		String sql="select*from comment where recipe_bno=? order by bno desc";
-		Connection conn=db.getConnection();
-		PreparedStatement pstmt=null;
-		ResultSet rs=null;
-		
+
+	// 댓글목록반환
+	public List<CommentDto> getCommentList(String recipe_bno) {
+		List<CommentDto> list = new Vector<CommentDto>();
+		String sql = "select * from r_comment where recipe_bno=? order by writeday desc";
+		Connection conn = db.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
 		try {
-			pstmt=conn.prepareStatement(sql);
-			//바인딩
-			pstmt.setInt(1, bno);
-			//실행
-			rs=pstmt.executeQuery();
-			
-			while(rs.next())
-			{
-				CommentDto dto=new CommentDto();
-				dto.setBno(rs.getInt("bno"));
-				dto.setRecipe_bno(rs.getInt("recipe_bno"));
+			pstmt = conn.prepareStatement(sql);
+			// 바인딩
+			pstmt.setString(1, recipe_bno);
+
+			// 실행
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				CommentDto dto = new CommentDto();
+				dto.setComment_bno(rs.getString("comment_bno"));
+				dto.setRecipe_bno(rs.getString("recipe_bno"));
+				dto.setNickname(rs.getString("nickname"));
+				dto.setMemberimg(rs.getString("memberimg"));
 				dto.setContent(rs.getString("content"));
 				dto.setWriteday(rs.getTimestamp("writeday"));
 
-				//리스트 추가
+				// 리스트 추가
 				list.add(dto);
 			}
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
+		} finally {
 			db.dbClose(rs, pstmt, conn);
 		}
 		return list;

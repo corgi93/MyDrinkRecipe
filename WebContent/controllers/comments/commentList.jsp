@@ -7,9 +7,9 @@
     pageEncoding="utf-8"%>
 <%
 	CommentDB db=new CommentDB();
-	String bno=request.getParameter("bno");
+	String recipe_bno=request.getParameter("recipe_bno");
 	
-	List<CommentDto> list=db.getCommentList(bno);
+	List<CommentDto> list=db.getCommentList(recipe_bno);
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 	
 %>
@@ -18,7 +18,7 @@
 	<% for(CommentDto dto:list) 
 	{%>
 		<commentdata>
-		<bno><%=dto.getBno() %></bno>
+		<bno><%=dto.getRecipe_bno() %></bno>
 		<nick><%=dto.getContent() %></nick>
 		<writeday><%=sdf.format(dto.getWriteday()) %></writeday>	
 	</commentdata>

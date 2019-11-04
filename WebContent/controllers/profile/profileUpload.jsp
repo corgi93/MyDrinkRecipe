@@ -14,11 +14,10 @@
 <body>
 	<%
 		String id = (String) session.getAttribute("id");
-	
+
 		request.setCharacterEncoding("utf-8");
-		String uploadPath = "D:\\workspace\\java\\MyDrinkRecipe\\WebContent\\thumbnail_user\\";
+		String uploadPath = "C:\\Users\\mynam\\eclipse-workspace\\MyDrinkRecipe\\WebContent\\thumbnail_user\\";
 		// String uploadPath = getServletContext().getRealPath("/r_thumbnail/");
-		System.out.print(uploadPath);
 
 		int size = 1024 * 1024 * 10;
 

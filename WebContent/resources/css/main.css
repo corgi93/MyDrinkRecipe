@@ -2,7 +2,7 @@
 
 #container {
 	margin: 0 auto;
-	width: 850px;
+	width: 945px;
 }
 
 .mainimg {
@@ -27,7 +27,7 @@
 }
 
 .recipes{
-	background-color: #ffffff;
+
 }
 
 .recipe_card {
@@ -38,6 +38,7 @@
 	height: 350px;
 	border: 1px solid #efefef;
 	box-shadow: 0 2px 3px #eee;
+	background-color: #fff;
 }
 
 img {
