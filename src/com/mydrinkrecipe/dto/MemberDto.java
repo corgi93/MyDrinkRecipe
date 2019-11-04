@@ -9,6 +9,8 @@ public class MemberDto {
 	private String password;
 	private String email;
 	private Timestamp date;
+	private String user_img;
+	private String introduce;
 
 	public String getBno() {
 		return bno;
@@ -56,6 +58,22 @@ public class MemberDto {
 
 	public void setDate(Timestamp date) {
 		this.date = date;
+	}
+
+	public String getUser_img() {
+		return user_img;
+	}
+
+	public void setUser_img(String user_img) {
+		this.user_img = user_img;
+	}
+
+	public String getIntroduce() {
+		return introduce;
+	}
+
+	public void setIntroduce(String introduce) {
+		this.introduce = introduce;
 	}
 
 }

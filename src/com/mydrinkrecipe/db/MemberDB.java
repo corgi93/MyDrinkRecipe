@@ -10,7 +10,6 @@ import com.mydrinkrecipe.dto.MemberDto;
 
 public class MemberDB {
 	DbConnect db = new DbConnect();
-	
 
 	// 가입. insert 멤버
 	public void registerMember(MemberDto dto) {
@@ -25,6 +24,57 @@ public class MemberDB {
 			ps.setString(2, dto.getId());
 			ps.setString(3, dto.getPassword());
 			ps.setString(4, dto.getEmail());
+
+			ps.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			db.dbClose(ps, conn);
+		}
+	}
+
+	// myPage뿌려줄 정보들
+	public MemberDto getMyPageInfos(String id) {
+		MemberDto dto = new MemberDto();
+		String sql = "select * from member where id=?";
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		conn = db.getConnection();
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				dto.setId(rs.getString("id"));
+				dto.setNickname(rs.getString("nickname"));
+				dto.setUser_img(rs.getString("user_img"));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		return dto;
+	}
+
+	// profile img 업로드
+
+	public void insertProfile(MemberDto dto) {
+		String sql = "update member set user_img=?, introduce=? where id=?";
+
+		Connection conn = null;
+		PreparedStatement ps = null;
+		conn = db.getConnection();
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, dto.getUser_img());
+			ps.setString(2, dto.getIntroduce());
+			ps.setString(3, dto.getId());
 
 			ps.execute();
 		} catch (SQLException e) {
