@@ -43,7 +43,7 @@ public class RecipeDB {
 	// 전체데이터를 list에 담아 리턴하는 메소드
 	public List<RecipeDto> getAllDatas() {
 		List<RecipeDto> list = new Vector<RecipeDto>();
-		String sql = "select * from recipe order by bno desc";
+		String sql = "select * from recipe order by recipe_bno desc";
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -54,7 +54,7 @@ public class RecipeDB {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				RecipeDto dto = new RecipeDto();
-				dto.setBno(rs.getInt("bno"));
+				dto.setRecipe_bno(rs.getString("Recipe_bno"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setIngredient(rs.getString("ingredient"));
@@ -76,7 +76,7 @@ public class RecipeDB {
 	}
 
 	public List<RecipeDto> getList() {
-		String sql = "select * from recipe order by bno asc";
+		String sql = "select * from recipe order by recipe_bno asc";
 		Connection conn = db.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -91,7 +91,7 @@ public class RecipeDB {
 			while (rs.next()) {
 				RecipeDto dto = new RecipeDto();
 
-				dto.setBno(rs.getInt("bno"));
+				dto.setRecipe_bno(rs.getString("Recipe_bno"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setIngredient(rs.getString("ingredient"));
@@ -116,7 +116,7 @@ public class RecipeDB {
 	public List<RecipeDto> getCardList() {
 		List<RecipeDto> list = new Vector<RecipeDto>();
 
-		String sql = "select * from recipe order by bno desc";
+		String sql = "select * from recipe order by recipe_bno desc";
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -128,7 +128,7 @@ public class RecipeDB {
 			while (rs.next()) {
 				RecipeDto dto = new RecipeDto();
 
-				dto.setBno(rs.getInt("bno"));
+				dto.setRecipe_bno(rs.getString("recipe_bno"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setIngredient(rs.getString("ingredient"));
@@ -151,7 +151,7 @@ public class RecipeDB {
 	public RecipeDto getDetail(int bno) {
 		RecipeDto dto = new RecipeDto();
 
-		String sql = "select * from recipe where bno=?";
+		String sql = "select * from recipe where recipe_bno=?";
 
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;
@@ -163,7 +163,7 @@ public class RecipeDB {
 
 			rs = ps.executeQuery();
 			if (rs.next()) {
-				dto.setBno(rs.getInt("bno"));
+				dto.setRecipe_bno(rs.getString("recipe_bno"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setIngredient(rs.getString("ingredient"));
