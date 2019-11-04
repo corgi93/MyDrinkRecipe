@@ -148,7 +148,7 @@ public class RecipeDB {
 		return list;
 	}
 
-	public RecipeDto getDetail(int bno) {
+	public RecipeDto getDetail(String recipe_bno) {
 		RecipeDto dto = new RecipeDto();
 
 		String sql = "select * from recipe where recipe_bno=?";
@@ -159,7 +159,7 @@ public class RecipeDB {
 
 		try {
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, bno);
+			ps.setString(1, recipe_bno);
 
 			rs = ps.executeQuery();
 			if (rs.next()) {
