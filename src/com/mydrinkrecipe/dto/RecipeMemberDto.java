@@ -1,11 +1,18 @@
 package com.mydrinkrecipe.dto;
 
 public class RecipeMemberDto {
+	// recipeDB
 	private String recipe_bno;
 	private String title;
 	private String time;
 	private String img;
 	private String writer;
+	private String price;
+	private String kcal;
+	private String ingredient;
+	private String content;
+
+	// memberDB
 	private String user_img;
 	private String nickname;
 	private int likecount;
@@ -48,6 +55,38 @@ public class RecipeMemberDto {
 
 	public void setWriter(String writer) {
 		this.writer = writer;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public String getKcal() {
+		return kcal;
+	}
+
+	public void setKcal(String kcal) {
+		this.kcal = kcal;
+	}
+
+	public String getIngredient() {
+		return ingredient;
+	}
+
+	public void setIngredient(String ingredient) {
+		this.ingredient = ingredient;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public String getUser_img() {

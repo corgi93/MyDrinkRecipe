@@ -19,13 +19,13 @@
 	<div id="container">
 		<div class="slideshow-container">
 			<div class="slides fade">
-				<img style="width: 100%; height: 500px;" src="resources/img/1.jpg">
+				<img style="width: 100%; height: 400px;" src="resources/img/1.jpg">
 			</div>
 			<div class="slides fade">
-				<img style="width: 100%; height: 500px;" src="resources/img/2.jpg">
+				<img style="width: 100%; height: 400px;" src="resources/img/2.jpg">
 			</div>
 			<div class="slides fade">
-				<img style="width: 100%; height: 500px;" src="resources/img/3.jpg">
+				<img style="width: 100%; height: 400px;" src="resources/img/3.jpg">
 			</div>
 			<div style="text-align: center; margin-top: -25px;">
 				<span class="dot"></span> <span class="dot"></span> <span
@@ -323,8 +323,9 @@
 			dots[slide_idx - 1].className += " active";
 
 			// 2.5초마다 변경, 재귀
-			setTimeout(showSlides, 2500);
+			setTimeout(showSlides, 3000);
 		}
+		
 	</script>
 </body>
 </html>

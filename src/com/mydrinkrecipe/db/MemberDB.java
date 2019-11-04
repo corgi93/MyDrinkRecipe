@@ -13,7 +13,7 @@ public class MemberDB {
 
 	// 가입. insert 멤버
 	public void registerMember(MemberDto dto) {
-		String sql = "insert into member values(seq_user.nextval,?,?,?,?,sysdate)";
+		String sql = "insert into member(nickname,id,pw,email,register) values(?,?,?,?,sysdate)";
 
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;

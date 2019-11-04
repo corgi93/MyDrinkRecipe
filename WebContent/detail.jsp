@@ -1,3 +1,4 @@
+<%@page import="com.mydrinkrecipe.dto.RecipeMemberDto"%>
 <%@page import="com.mydrinkrecipe.dto.RecipeDto"%>
 <%@page import="com.mydrinkrecipe.db.RecipeDB"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
@@ -18,7 +19,7 @@
 		RecipeDB db = new RecipeDB();
 		String bno = request.getParameter("recipe_bno");
 
-		RecipeDto dto = db.getDetail(bno);
+		RecipeMemberDto dto = db.getDetail(bno);
 	%>
 
 	<div class="recipe_head">
@@ -31,11 +32,15 @@
 					<h2>
 						<strong><%=dto.getTitle()%></strong>
 					</h2>
-					<button>스크랩</button>
+					<form action="./controllers/recipe/scrapRecipeXml.jsp">
+						<input type="hidden" id="recipe_bno" name="recipe_bno" value="<%=dto.getRecipe_bno()%>">
+						<input type="hidden" id="member_nick" name="member_nick" value="<%=dto.getWriter()%>">
+						<button type="submit" id="scrapeBtn">스크랩</button>
+					</form>
 				</div>
 				<div class="recipe_creater">
-					<img class="head_profil" src="resources/img/profil1.png">
-					<h3>아이엠샘</h3>
+					<img class="head_profil" src="resources/img/<%=dto.getUser_img()%>">
+					<h3><%=dto.getNickname() %></h3>
 				</div>
 			</div>
 
@@ -109,5 +114,7 @@
 			</div>
 		</div>
 	</div>
+	
+	<script type="text/javascript" src="./resources/js/detail.js"></script>
 </body>
 </html>

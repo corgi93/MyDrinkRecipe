@@ -11,7 +11,6 @@
 
 	MemberDB db = new MemberDB();
 	MemberDto dto = db.getMyPageInfos(getSessionID);
-	System.out.println(dto.getUser_img());
 %>
 
 <body>

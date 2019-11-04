@@ -148,10 +148,10 @@ public class RecipeDB {
 		return list;
 	}
 
-	public RecipeDto getDetail(String recipe_bno) {
-		RecipeDto dto = new RecipeDto();
+	public RecipeMemberDto getDetail(String recipe_bno) {
+		RecipeMemberDto dto = new RecipeMemberDto();
 
-		String sql = "select * from recipe where recipe_bno=?";
+		String sql = "SELECT r.recipe_bno , r.title, r.time, r.img, r.writer, r.likecount, r.price, r.kcal, r.ingredient, r.content, m.user_img , m.nickname FROM recipe r, member m WHERE m.nickname = r.writer AND recipe_bno=?";
 
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;
@@ -163,15 +163,22 @@ public class RecipeDB {
 
 			rs = ps.executeQuery();
 			if (rs.next()) {
+				// recipe setter
 				dto.setRecipe_bno(rs.getString("recipe_bno"));
 				dto.setTitle(rs.getString("title"));
-				dto.setContent(rs.getString("content"));
-				dto.setIngredient(rs.getString("ingredient"));
 				dto.setTime(rs.getString("time"));
-				dto.setPrice(rs.getString("price"));
-				dto.setLikecount(rs.getInt("likecount"));
-				dto.setKcal(rs.getString("kcal"));
 				dto.setImg(rs.getString("img"));
+				dto.setWriter(rs.getString("writer"));
+				dto.setLikecount(rs.getInt("likecount"));
+				dto.setPrice(rs.getString("price"));
+				dto.setKcal(rs.getString("kcal"));
+				dto.setIngredient(rs.getString("ingredient"));
+				dto.setContent(rs.getString("content"));
+				dto.setLikecount(rs.getInt("likecount"));
+				
+				// member setter
+				dto.setUser_img(rs.getString("user_img"));
+				dto.setNickname(rs.getString("nickname"));
 			}
 
 		} catch (Exception e) {
