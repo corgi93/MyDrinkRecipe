@@ -15,7 +15,7 @@ public class RecipeDB {
 
 	// 레시피 등록
 	public void insertRecipe(RecipeDto dto) {
-		String sql = "insert into recipe values(seq_recipe.nextval,?,?,?,?,?,?,?,?)";
+		String sql = "insert into recipe values(seq_recipe.nextval,?,?,?,?,?,?,?,?,?)";
 
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;
@@ -30,6 +30,7 @@ public class RecipeDB {
 			ps.setInt(6, dto.getLikecount());
 			ps.setString(7, dto.getKcal());
 			ps.setString(8, dto.getImg());
+			ps.setString(9, dto.getWriter());
 
 			ps.execute();
 		} catch (SQLException e) {
@@ -38,23 +39,21 @@ public class RecipeDB {
 			db.dbClose(ps, conn);
 		}
 	}
-	
-	//전체데이터를 list에 담아 리턴하는 메소드
-	public List<RecipeDto>getAllDatas()
-	{
-		List<RecipeDto> list=new Vector<RecipeDto>();
-		String sql="select * from recipe order by bno desc";
+
+	// 전체데이터를 list에 담아 리턴하는 메소드
+	public List<RecipeDto> getAllDatas() {
+		List<RecipeDto> list = new Vector<RecipeDto>();
+		String sql = "select * from recipe order by bno desc";
 		Connection conn = db.getConnection();
-		PreparedStatement ps=null;
-		ResultSet rs=null;
-		
-		conn=db.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		conn = db.getConnection();
 		try {
-			ps=conn.prepareStatement(sql);
-			rs=ps.executeQuery();
-			while(rs.next())
-			{
-				RecipeDto dto=new RecipeDto();
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				RecipeDto dto = new RecipeDto();
 				dto.setBno(rs.getInt("bno"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
@@ -64,13 +63,13 @@ public class RecipeDB {
 				dto.setLikecount(rs.getInt("likecount"));
 				dto.setKcal(rs.getString("kcal"));
 				dto.setImg(rs.getString("img"));
-				
+
 				list.add(dto);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
+		} finally {
 			db.dbClose(rs, ps, conn);
 		}
 		return list;
@@ -185,22 +184,3 @@ public class RecipeDB {
 
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

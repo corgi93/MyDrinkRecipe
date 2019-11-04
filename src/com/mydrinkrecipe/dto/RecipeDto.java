@@ -10,6 +10,7 @@ public class RecipeDto {
 	private int likecount;
 	private String kcal;
 	private String img;
+	private String writer;
 	
 	public int getBno() {
 		return bno;
@@ -64,5 +65,11 @@ public class RecipeDto {
 	}
 	public void setImg(String img) {
 		this.img = img;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
 }
