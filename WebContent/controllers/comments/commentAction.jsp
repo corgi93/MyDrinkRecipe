@@ -13,14 +13,16 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	String c_content=request.getParameter("content");
-	
+	String recipe_bno = request.getParameter("recipe_bno");
+
 	CommentDB db=new CommentDB();
 	
 	CommentDto dto=new CommentDto();
 	dto.setContent(c_content);
+	dto.setRecipe_bno(recipe_bno);
 	
 	db.insertComment(dto);
-	response.sendRedirect("../../detail.jsp");
+	response.sendRedirect("../../detail.jsp?bno="+recipe_bno);
 %>
 </body>
 </html>

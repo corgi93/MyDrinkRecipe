@@ -1,4 +1,5 @@
 
+<%@page import="com.mydrinkrecipe.dto.RecipeMemberDto"%>
 <%@page import="java.util.Vector"%>
 <%@page import="com.mydrinkrecipe.dto.RecipeDto"%>
 <%@page import="java.util.List"%>
@@ -7,20 +8,13 @@
 	pageEncoding="utf-8"%>
 <%@include file="./views/includes/header.jsp"%>
 
-</head> <%
-	//db 선언
-	RecipeDB db=new RecipeDB();
-	//list 가져오기
-	List<RecipeDto> list=db.getAllDatas();
-	
-%>
-<body>
 	<%
 		RecipeDB db = new RecipeDB();
-		List<RecipeDto> list = new Vector<RecipeDto>();
-
+		List<RecipeMemberDto> list = new Vector<RecipeMemberDto>();
 		list = db.getCardList();
 	%>
+</head>
+<body>
 
 	<div id="container">
 		<div class="slideshow-container">
@@ -47,24 +41,25 @@
 		<!-- 이 밑부분을 form으로 만들어야함 -->
 		<div class="recipes">
 			<%
-				for (RecipeDto dto : list) {
+				for (RecipeMemberDto dto : list) {
 			%>
 
 			<div class="recipe_card">
 				<div class="card_img">
-					<a class="card1" href="./detail.jsp?bno=<%=dto.getBno()%>"> <img src="r_thumbnail/<%=dto.getImg()%>">
-					</a> <a class="card2"> <img src="resources/img/love.jpg">
+					<a class="card1" href="./detail.jsp?recipe_bno=<%=dto.getRecipe_bno()%>"> 
+					<img src="r_thumbnail/<%=dto.getImg()%>">
+					</a> <a class="card2"> <img src="thumbnail_user/<%=dto.getUser_img()%>">
 					</a>
 				</div>
 				<div style="text-align: center;">
 					<p>
-						<a class="card3"><b>닉네임</b></a>
+						<a class="card3"><b><%=dto.getWriter()%></b></a>
 					</p>
 					<p>
 						<a class="card4"><%=dto.getTitle()%></a>
 					</p>
 					<p>
-						<a class="card5"><%=dto.getBno()%></a>
+						<a class="card5"><%=dto.getRecipe_bno()%></a>
 					</p>
 				</div>
 				<div class="option">

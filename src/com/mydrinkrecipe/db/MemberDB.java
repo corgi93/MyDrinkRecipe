@@ -39,15 +39,15 @@ public class MemberDB {
 		String sql = "select * from member where id=?";
 
 		Connection conn = null;
-		PreparedStatement pstmt = null;
+		PreparedStatement ps = null;
 		ResultSet rs = null;
 
 		conn = db.getConnection();
 		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
 
-			rs = pstmt.executeQuery();
+			rs = ps.executeQuery();
 			if (rs.next()) {
 				dto.setId(rs.getString("id"));
 				dto.setNickname(rs.getString("nickname"));
@@ -57,7 +57,7 @@ public class MemberDB {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			db.dbClose(rs, pstmt, conn);
+			db.dbClose(rs, ps, conn);
 		}
 		return dto;
 	}

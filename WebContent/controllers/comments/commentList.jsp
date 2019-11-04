@@ -4,25 +4,28 @@
 <%@page import="com.mydrinkrecipe.dto.CommentDto"%>
 <%@page import="com.mydrinkrecipe.db.CommentDB"%>
 <%@ page language="java" contentType="text/xml; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
 <%
-	CommentDB db=new CommentDB();
-	String bno=request.getParameter("bno");
+	request.setCharacterEncoding("utf-8");
+	CommentDB db = new CommentDB();
+	String comment_bno = request.getParameter("comment_bno");
+	String recipe_bno = request.getParameter("recipe_bno");
+
+	System.out.println("코멘트bno:"+comment_bno);
+	System.out.println("레시피bno:"+recipe_bno);
 	
-	List<CommentDto> list=db.getCommentList(bno);
-	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
-	
+	List<CommentDto> list = db.getCommentList(comment_bno, recipe_bno);
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 %>
-<result>
-	<senddate>
-	<% for(CommentDto dto:list) 
-	{%>
-		<commentdata>
-		<bno><%=dto.getBno() %></bno>
-		<nick><%=dto.getContent() %></nick>
-		<writeday><%=sdf.format(dto.getWriteday()) %></writeday>	
-	</commentdata>
-	<%}
-	%>
-	</senddate>
-</result>
+<result> 
+<%
+ 	for (CommentDto dto : list) {
+%> 
+	<commentdata> 
+ 		<comment_bno><%=dto.getComment_bno()%></comment_bno>
+		<content><%=dto.getContent()%></content> 
+		<writeday><%=sdf.format(dto.getWriteday())%></writeday>
+	</commentdata> 
+	<%}%> 
+ </result>
+	

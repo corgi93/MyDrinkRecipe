@@ -27,6 +27,7 @@
 			String title = multi.getParameter("title");
 			String time = multi.getParameter("time");
 			String ingredient = multi.getParameter("ingredient");
+			String price = multi.getParameter("price");
 			String kcal = multi.getParameter("kcal");
 			String content = multi.getParameter("content");
 			String writer = multi.getParameter("writer");
@@ -41,6 +42,7 @@
 			dto.setTime(time);
 			dto.setIngredient(ingredient);
 			dto.setWriter(writer);
+			dto.setPrice(price);
 			dto.setKcal(kcal);
 			dto.setContent(content);
 			dto.setImg(imgname);

@@ -9,6 +9,7 @@ import java.util.Vector;
 
 import com.mydrinkrecipe.dbconnect.DbConnect;
 import com.mydrinkrecipe.dto.RecipeDto;
+import com.mydrinkrecipe.dto.RecipeMemberDto;
 
 public class RecipeDB {
 	DbConnect db = new DbConnect();
@@ -43,7 +44,7 @@ public class RecipeDB {
 	// 전체데이터를 list에 담아 리턴하는 메소드
 	public List<RecipeDto> getAllDatas() {
 		List<RecipeDto> list = new Vector<RecipeDto>();
-		String sql = "select * from recipe order by bno desc";
+		String sql = "select * from recipe order by recipe_bno desc";
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -54,7 +55,7 @@ public class RecipeDB {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				RecipeDto dto = new RecipeDto();
-				dto.setBno(rs.getInt("bno"));
+				dto.setRecipe_bno(rs.getString("recipe_bno"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setIngredient(rs.getString("ingredient"));
@@ -76,7 +77,7 @@ public class RecipeDB {
 	}
 
 	public List<RecipeDto> getList() {
-		String sql = "select * from recipe order by bno asc";
+		String sql = "select * from recipe order by recipe_bno asc";
 		Connection conn = db.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -91,7 +92,7 @@ public class RecipeDB {
 			while (rs.next()) {
 				RecipeDto dto = new RecipeDto();
 
-				dto.setBno(rs.getInt("bno"));
+				dto.setRecipe_bno(rs.getString("recipe_bno"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setIngredient(rs.getString("ingredient"));
@@ -113,10 +114,10 @@ public class RecipeDB {
 		return list;
 	}
 
-	public List<RecipeDto> getCardList() {
-		List<RecipeDto> list = new Vector<RecipeDto>();
+	public List<RecipeMemberDto> getCardList() {
+		List<RecipeMemberDto> list = new Vector<RecipeMemberDto>();
 
-		String sql = "select * from recipe order by bno desc";
+		String sql = "select r.recipe_bno , r.title, r.time, r.img, r.writer, r.likecount, m.user_img , m.nickname from recipe r, member m where m.nickname = r.writer";
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -126,17 +127,16 @@ public class RecipeDB {
 
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				RecipeDto dto = new RecipeDto();
+				RecipeMemberDto dto = new RecipeMemberDto();
 
-				dto.setBno(rs.getInt("bno"));
+				dto.setRecipe_bno(rs.getString("recipe_bno"));
 				dto.setTitle(rs.getString("title"));
-				dto.setContent(rs.getString("content"));
-				dto.setIngredient(rs.getString("ingredient"));
 				dto.setTime(rs.getString("time"));
-				dto.setPrice(rs.getString("price"));
-				dto.setLikecount(rs.getInt("likecount"));
-				dto.setKcal(rs.getString("kcal"));
 				dto.setImg(rs.getString("img"));
+				dto.setWriter(rs.getString("writer"));
+				dto.setLikecount(rs.getInt("likecount"));
+				dto.setUser_img(rs.getString("user_img"));
+				dto.setNickname(rs.getString("nickname"));
 
 				list.add(dto);
 			}
@@ -148,10 +148,10 @@ public class RecipeDB {
 		return list;
 	}
 
-	public RecipeDto getDetail(int bno) {
+	public RecipeDto getDetail(String recipe_bno) {
 		RecipeDto dto = new RecipeDto();
 
-		String sql = "select * from recipe where bno=?";
+		String sql = "select * from recipe where recipe_bno=?";
 
 		Connection conn = db.getConnection();
 		PreparedStatement ps = null;
@@ -159,11 +159,11 @@ public class RecipeDB {
 
 		try {
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, bno);
+			ps.setString(1, recipe_bno);
 
 			rs = ps.executeQuery();
 			if (rs.next()) {
-				dto.setBno(rs.getInt("bno"));
+				dto.setRecipe_bno(rs.getString("recipe_bno"));
 				dto.setTitle(rs.getString("title"));
 				dto.setContent(rs.getString("content"));
 				dto.setIngredient(rs.getString("ingredient"));

@@ -3,7 +3,6 @@ package com.mydrinkrecipe.dto;
 import java.sql.Timestamp;
 
 public class MemberDto {
-	private String bno;
 	private String id;
 	private String nickname;
 	private String password;
@@ -11,14 +10,6 @@ public class MemberDto {
 	private Timestamp date;
 	private String user_img;
 	private String introduce;
-
-	public String getBno() {
-		return bno;
-	}
-
-	public void setBno(String bno) {
-		this.bno = bno;
-	}
 
 	public String getNickname() {
 		return nickname;
