@@ -12,7 +12,7 @@
 	String c_content=request.getParameter("content");
 	String recipe_bno = request.getParameter("recipe_bno");
 	
-	System.out.println(image);
+/* 	System.out.println(image); */
 
 	CommentDB db=new CommentDB();
 	
@@ -24,29 +24,9 @@
 	
 	// insert
 	db.insertComment(dto);
-	
-	List<CommentDto> list=db.getCommentList(recipe_bno);
-	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
-	
-/* 	for(CommentDto c_dto:list) {
-		System.out.println(c_dto.getRecipe_bno());
-		System.out.println(c_dto.getContent());
-		System.out.println(c_dto.getWriteday());
-		
-	} */
-	
+
 %>
 <result>
-	<% for(CommentDto c_dto:list) 
-	{%>
-	<commentdata>
-		<bno><%=c_dto.getRecipe_bno() %></bno>
-		<nick><%=c_dto.getNickname() %></nick>
-		<content><%=c_dto.getContent() %></content>
-		<memberimg><%=c_dto.getMemberimg() %></memberimg>
-		<writeday><%=sdf.format(c_dto.getWriteday()) %></writeday>	
-	</commentdata>
-	<%}
-	%>
+	success
 </result>
 

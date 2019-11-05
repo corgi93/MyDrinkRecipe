@@ -137,19 +137,20 @@ div.recipe_image>img {
 	border: 1px solid green;
 	border-radius: 50%;
 	margin: 0 auto;
-	margin-top: 28px;
+	margin-top: 0px;
 	overflow: hidden;
 	float: left;
 }
 
 .answer_info {
-	width: 615px;
-	height: 100px;
+	width: 640px;
+	height: 50px;
 	/* border: 1px solid gray;
 	border-top: 2px solid gray; */
 	margin: 0 auto;
 	overflow: hidden;
-	float: right;
+	float: left;
+	padding:30px;
 }
 
 .answer_nickname {
@@ -169,7 +170,7 @@ div.recipe_image>img {
 }
 
 .input_content {
-	width: 480px;
+	width: 548px;
 	height: 55px;
 	border: 1px solid gray;
 	margin: 0 auto;
@@ -213,6 +214,7 @@ ul li {
 }
 #comment_box{
 	width: 700px;
+	height: 105px;
 	border: 2px solid #EF89FF;
 	border-radius:1.0em;
 	margin: 0 auto;
@@ -222,6 +224,7 @@ ul li {
 	width: 700px;
 	height: 100px;
 	margin: 0 auto;
+	padding: 20px;
 	/* border: 1px solid red; */
 }
 
