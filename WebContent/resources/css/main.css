@@ -3,6 +3,7 @@
 #container {
 	margin: 0 auto;
 	width: 945px;
+	background-color: #eee;
 }
 
 .mainimg {
@@ -24,10 +25,6 @@
 	border-radius: 20px;
 	width: 200px;
 	height: 50px;
-}
-
-.recipes{
-
 }
 
 .recipe_card {
@@ -90,6 +87,10 @@ p {
 	float: right;
 	margin-right: 20px;
 	padding: 10px;
+}
+
+body{
+	background-image: url(https://cdn.pixabay.com/photo/2015/11/02/18/32/water-1018808_960_720.jpg)
 }
 
 /*
