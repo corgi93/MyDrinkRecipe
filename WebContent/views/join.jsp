@@ -106,7 +106,7 @@
 	<h2>회원가입</h2>
 
 	<div class="form-body">
-		<form action="../controllers/joinAction.jsp" method="post"
+		<form action="../controllers/join/joinAction.jsp" method="post"
 			onsubmit="return formNullCheck();">
 			<div>
 				<div class="text">아이디</div>

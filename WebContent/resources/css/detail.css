@@ -106,8 +106,7 @@ div.recipe_image>img {
 	margin: 0 auto;
 	padding: 20px;
 }
-
-.tip {
+.tip{
 	font-family: 'Sunflower';
 	font-size: 25px;
 	color: #4E31FF;
@@ -187,15 +186,20 @@ ul li {
 	/* border: 1px solid green; */
 }
 
-.old_box {
+.comment_box {
+	width: 615px;
+	height: 200px;
+	/* border: 1px solid red; */
+}
+.old_box{
 	width: 600px;
 	height: 50px;
 	border: 1px solid gray;
 }
 
 .btn2 {
-	height: 60px;
-	background-color: #DA89FF;
+	height:60px;
+	background-color: #DA89FF; 
 	border: none;
 	color: white;
 	text-align: center;
@@ -205,16 +209,15 @@ ul li {
 	margin: 4px 2px;
 	cursor: pointer;
 	border-radius: 4px;
+	
 }
-
-#comment_box {
+#comment_box{
 	width: 700px;
 	border: 2px solid #EF89FF;
-	border-radius: 1.0em;
+	border-radius:1.0em;
 	margin: 0 auto;
 	padding-bottom: 20px;
 }
-
 .old_comment {
 	width: 700px;
 	height: 100px;
@@ -230,16 +233,8 @@ ul li {
 	padding-bottom: 20px;
 	font-size: 25px;
 	font-family: sunflower;
-	color: #EF89FF;
-}
-
-.user_comment {
-	width: 590px;
-	height : 40px;
-	border: 2px solid gray;
-	border-radius: 1.0em;
-	margin: 0 auto;
-	padding-bottom: 20px;
+	color:#EF89FF;
+	
 }
 
 .new_comment {

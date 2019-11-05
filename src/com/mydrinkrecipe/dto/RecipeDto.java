@@ -1,7 +1,7 @@
 package com.mydrinkrecipe.dto;
 
 public class RecipeDto {
-	private int bno;
+	private String recipe_bno;
 	private String title;
 	private String content;
 	private String ingredient;
@@ -10,12 +10,14 @@ public class RecipeDto {
 	private int likecount;
 	private String kcal;
 	private String img;
+	private String writer;
 	
-	public int getBno() {
-		return bno;
+	
+	public String getRecipe_bno() {
+		return recipe_bno;
 	}
-	public void setBno(int bno) {
-		this.bno = bno;
+	public void setRecipe_bno(String recipe_bno) {
+		this.recipe_bno = recipe_bno;
 	}
 	public String getTitle() {
 		return title;
@@ -64,5 +66,11 @@ public class RecipeDto {
 	}
 	public void setImg(String img) {
 		this.img = img;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
 }
