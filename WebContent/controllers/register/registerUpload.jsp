@@ -14,7 +14,8 @@
 <body>
    <%
       request.setCharacterEncoding("utf-8");
-      String uploadPath = "C:\\Users\\mynam\\eclipse-workspace\\MyDrinkRecipe\\WebContent\\r_thumbnail\\";
+  
+      String uploadPath = "C:\\Users\\geuna\\eclipse-workspace\\MyDrinkRecipe\\WebContent\\thumbnail_user\\";
       // String uploadPath = getServletContext().getRealPath("/r_thumbnail/");
       System.out.print(uploadPath);
 
