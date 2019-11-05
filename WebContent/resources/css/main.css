@@ -2,7 +2,8 @@
 
 #container {
 	margin: 0 auto;
-	width: 945px;
+	width: 60%;
+	height: 100%;
 	background-color: #eee;
 }
 
@@ -90,7 +91,7 @@ p {
 }
 
 body{
-	background-image: url(https://cdn.pixabay.com/photo/2015/11/02/18/32/water-1018808_960_720.jpg)
+	background-image: url(https://cdn.pixabay.com/photo/2017/02/15/20/34/striped-2069813_1280.png)
 }
 
 /*
