@@ -4,6 +4,14 @@
 	margin: 0;
 	padding: 0;
 }
+body{
+	background-image: url(https://blazepress.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_500/MTMyNTkzNjE0MDM0MzY2NDM0/subtle-motion-gif-6gif.webp)
+}
+div.detail{
+	width: 60%;
+	background-color: white;
+	margin: 0 auto;
+}
 
 .recipe_creater {
 	text-align: center;
@@ -105,15 +113,17 @@ div.recipe_image>img {
 	border-top: 2px solid #DDD;
 	margin: 0 auto;
 	padding: 20px;
+	
 }
 .tip{
 	font-family: 'Sunflower';
 	font-size: 25px;
 	color: #4E31FF;
+	font-weight: bolder;
 }
 
 .recipe_tip .tip_content {
-	width: 655px;
+	width: 663px;
 	height: 50px;
 	border: 2px solid #4E31FF;
 	margin: 0 auto;
@@ -125,7 +135,6 @@ div.recipe_image>img {
 
 .answer_comment {
 	width: 700px;
-	height: 300px;
 	/* border: 1px solid gray; */
 	margin: 0 auto;
 	padding: 20px;
@@ -144,7 +153,7 @@ div.recipe_image>img {
 
 .answer_info {
 	width: 640px;
-	height: 50px;
+	height: 78px;
 	/* border: 1px solid gray;
 	border-top: 2px solid gray; */
 	margin: 0 auto;
@@ -182,8 +191,8 @@ ul li {
 }
 
 .answer_input {
-	width: 615px;
-	height: 30px;
+	width: 700px;
+	margin: 0 auto;
 	/* border: 1px solid green; */
 }
 
@@ -213,7 +222,7 @@ ul li {
 	
 }
 #comment_box{
-	width: 700px;
+	width: 703px;
 	height: 105px;
 	border: 2px solid #EF89FF;
 	border-radius:1.0em;
@@ -221,11 +230,11 @@ ul li {
 	padding-bottom: 20px;
 }
 .old_comment {
-	width: 700px;
-	height: 100px;
+	width: 663px;
+	height: 70px;
 	margin: 0 auto;
 	padding: 20px;
-	/* border: 1px solid red; */
+	border-bottom: 1px solid gray; */
 }
 
 .comment_subject {

@@ -22,7 +22,7 @@
       RecipeMemberDto dto = db.getDetail(bno);
    %>
     <input id="bno" type="hidden" value="<%=bno %>">
-
+<div class="detail">
    <div class="recipe_head">
       <div class="recipe_image">
          <img alt="이미지 없음" src="r_thumbnail/<%=dto.getImg()%>">
@@ -82,40 +82,29 @@
 
    <div class="recipe_tip">
       <div class="tip">
-         <strong>나만의 꿀팁<strong></strong>
+         나만의 꿀팁
       </div>
       <p class="tip_content"><%=dto.getContent()%></p>
    </div>
    <div class="answer_comment">
-      <div class="comment_subject">한 줄 댓글</div>
+   <div class="comment_subject">한 줄 댓글</div>
       <div id="comment_box">
          <div class="new_comment">
             <div class="answer_info">
-               <!-- <form class="comment_box" id="comment_form"
-                  action="./controllers/comments/commentAction.jsp"
-                  accept-charset="UTF-8" method="post"> -->
                   <input class="input_content" type="text" name="content"
                      id="content" placeholder="한 줄 댓글을 남겨주세요" /> 
                   <input type="hidden" id="recipe_bno" name="recipe_bno" value="<%=bno%>"> <!-- hidden으로 id랑 name주고 value보내장! -->
                   <input type="hidden" id="nick" name="nick" value="<%=dto.getNickname()%>"> <!-- hidden으로 id랑 name주고 value보내장! -->
                   <input type="hidden" id="user_img" name="user_img" value="<%=dto.getUser_img()%>"><!-- hidden으로 id랑 name주고 value보내장! -->
                   <button type="button" id="btnsave" class="btn2">댓글남기기</button>
-               <!-- </form> -->
             </div>
          </div>
-       
-
-      <!--    <div class="old_comment"> -->
-           <!--  <span class="answer_profil_img" id="img">image</span> -->
-           <!--  <div class="answer_info"> -->
-               <!-- <div class="answer_nickname" id="nickname">nickname</div>
-               		<div class="answer_writeday">writeday</div> -->
-               <div class="answer_input" id="out1"></div>
                <p class="user_comment"></p>
-            </div>
-         </div>
       </div>
-   </div>
+   <div class="answer_input" id="out1"></div>
+      
+    </div>
+</div>
    <script type="text/javascript" src="./resources/js/detailComment.js"></script>
 </body>
 </html>
