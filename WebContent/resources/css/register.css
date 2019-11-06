@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 div#register_area {
-	margin: 0 auto;
+	margin: 50px auto;
 	width: 60%;
 	background-color: #eee;
-	
+	text-align: center;
 }
 
 form>div {
@@ -14,7 +14,9 @@ form>div {
 
 h2, h3 {
 	font-family: 'Sunflower';
-	
+	height: 30px;
+	margin: 0 auto;
+	width : 100%;
 }
 
 h3{
@@ -27,7 +29,7 @@ input.register_input {
 }
 
 textarea {
-	width: 500px;
+	width: 50%;
 	height: 100px;
 	resize: none;
 }
