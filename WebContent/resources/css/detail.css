@@ -5,12 +5,13 @@
 	padding: 0;
 }
 body{
-	background-image: url(https://blazepress.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_500/MTMyNTkzNjE0MDM0MzY2NDM0/subtle-motion-gif-6gif.webp)
+	background-image: url(https://beartistbeart.files.wordpress.com/2016/03/sea-life.gif?w=540&zoom=2);
+	background-size: cover;
 }
 div.detail{
-	width: 60%;
+	width: 1000px;
 	background-color: white;
-	margin: 0 auto;
+	margin: 50px auto;
 }
 
 .recipe_creater {
@@ -135,6 +136,7 @@ div.recipe_image>img {
 
 .answer_comment {
 	width: 700px;
+
 	/* border: 1px solid gray; */
 	margin: 0 auto;
 	padding: 20px;
