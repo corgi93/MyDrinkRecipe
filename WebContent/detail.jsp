@@ -21,6 +21,7 @@
 
       RecipeMemberDto dto = db.getDetail(bno);
    %>
+
     <input id="bno" type="hidden" value="<%=bno %>">
 <div class="detail">
    <div class="recipe_head">
@@ -35,8 +36,8 @@
                </h2>
                <form action="./controllers/recipe/scrapRecipeXml.jsp">
                   <input type="hidden" id="recipe_bno" name="recipe_bno"
-                     value="<%=dto.getRecipe_bno()%>"> <input type="hidden"
-                     id="member_nick" name="member_nick" value="<%=dto.getWriter()%>">
+                     value="<%=dto.getRecipe_bno()%>"> 
+                     <input type="hidden"id="member_nick" name="member_nick" value="<%=dto.getWriter()%>">
                   <button type="submit" id="scrapeBtn">스크랩</button>
                </form>
             </div>
@@ -101,10 +102,28 @@
          </div>
                <p class="user_comment"></p>
       </div>
-   <div class="answer_input" id="out1"></div>
-      
-    </div>
+   <div class="answer_input" id="out1"> </div>
+	<!--  <form class="form-delete" action="./controllers/comments/commentdelete.jsp" method="post">
+   		<input type="hidden" name="comment_del" value="comment_del"/>
+   		<button type="submit" class="btn_delete">삭제</button>
+   </form>  -->
+   
 </div>
    <script type="text/javascript" src="./resources/js/detailComment.js"></script>
+		
+	<script id="commentTemplate" type="commentTemplate">
+		<div class="old_comment">
+			<span class="answer_profil_img">
+				<img src={memberimg}>
+			</span>
+			<div style="width:600px;">
+				<b>{nickname}</b>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<writeday>{writeday}</writeday>
+			</div>
+			<div style="width:600px;">{content}</div>
+		</div>
+	</script>
+
 </body>
 </html>
