@@ -21,12 +21,14 @@
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 20px;
 	margin: 4px 2px;
 	cursor: pointer;
 	border-radius: 20px;
 	width: 200px;
 	height: 50px;
+	font-family: 'Sunflower';
+	
 }
 
 .recipe_card {
@@ -36,7 +38,7 @@
 	width: 200px;
 	height: 350px;
 	border: 1px solid #efefef;
-	box-shadow: 0 2px 3px #eee;
+	box-shadow: 0 2px 3px white;
 	background-color: #fff;
 }
 
@@ -92,7 +94,7 @@ p {
 }
 
 body{
-	background-size: cover;
+	background-size: auto;
 	background-image: url(https://blazepress.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_500/MTMyNTkzNjE0MDM0MzY2NDM0/subtle-motion-gif-6gif.webp)
 }
 

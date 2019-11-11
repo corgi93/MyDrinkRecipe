@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 div#register_area {
-	margin: 50px auto;
+	margin: 60px auto;
 	width: 60%;
-	background-color: #eee;
+	background: linear-gradient( to top, white, #c0c0 );
 	text-align: center;
+	padding: 30px;
 }
 
 form>div {
@@ -49,9 +50,6 @@ button.btns {
 	width: 70px;
 }
 
-button#complete {
-	float: right;
-}
 button#back{
 	float: left
 }

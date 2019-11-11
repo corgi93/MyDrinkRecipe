@@ -22,6 +22,8 @@ div.header-container {
 a {
 	text-decoration: none;
 	color: #000000;
+	font-family: 'Sunflower';
+	font-size: medium;
 }
 
 div.logo {

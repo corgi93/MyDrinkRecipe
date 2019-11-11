@@ -3,8 +3,9 @@
 .login-container {
 	margin: 50px auto;
 	text-align: center;
-	background-color: #eee;
+	background: linear-gradient( to top, white, #c0c0 );
 	width: 60%;
+	padding: 30px;
 }
 
 .form-body {

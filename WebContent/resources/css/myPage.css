@@ -4,7 +4,7 @@ div#myPage_container {
 	width: 60%;
 	height: 100%;
 	margin: 50px auto;
-	background-color: #eee;
+	background: linear-gradient( to top, #c0c0, white );
 }
 
 #user_wrapper {
