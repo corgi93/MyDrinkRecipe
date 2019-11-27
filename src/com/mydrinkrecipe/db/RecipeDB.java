@@ -117,7 +117,7 @@ public class RecipeDB {
    public List<RecipeMemberDto> getCardList() {
       List<RecipeMemberDto> list = new Vector<RecipeMemberDto>();
 
-      String sql = "select r.recipe_bno , r.title, r.time, r.img, r.writer, r.likecount, m.user_img , m.nickname from recipe r, member m where m.nickname = r.writer";
+      String sql = "select r.recipe_bno , r.title, r.time, r.img, r.writer, r.likecount, m.user_img , m.nickname from recipe r, member m where m.nickname = r.writer order by recipe_bno desc";
       Connection conn = db.getConnection();
       PreparedStatement ps = null;
       ResultSet rs = null;
@@ -151,7 +151,7 @@ public class RecipeDB {
    public RecipeMemberDto getDetail(String recipe_bno) {
       RecipeMemberDto dto = new RecipeMemberDto();
 
-      String sql = "SELECT r.recipe_bno , r.title, r.time, r.img, r.writer, r.likecount, r.price, r.kcal, r.ingredient, r.content, m.user_img , m.nickname FROM recipe r, member m WHERE m.nickname = r.writer AND recipe_bno=?";
+      String sql = "SELECT r.recipe_bno , r.title, r.time, r.img, r.writer, r.likecount, r.price, r.kcal, r.ingredient, r.content, m.user_img , m.nickname, m.id FROM recipe r, member m WHERE m.nickname = r.writer AND recipe_bno=?";
 
       Connection conn = db.getConnection();
       PreparedStatement ps = null;
@@ -179,6 +179,7 @@ public class RecipeDB {
             // member setter
             dto.setUser_img(rs.getString("user_img"));
             dto.setNickname(rs.getString("nickname"));
+            dto.setId(rs.getString("id"));
          }
 
       } catch (Exception e) {

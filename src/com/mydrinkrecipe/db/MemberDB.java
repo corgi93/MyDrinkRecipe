@@ -11,7 +11,6 @@ import com.mydrinkrecipe.dto.MemberDto;
 public class MemberDB {
 	DbConnect db = new DbConnect();
 
-	// 가입. insert 멤버
 	public void registerMember(MemberDto dto) {
 		String sql = "insert into member(nickname,id,pw,email,register) values(?,?,?,?,sysdate)";
 
@@ -33,7 +32,6 @@ public class MemberDB {
 		}
 	}
 
-	// myPage뿌려줄 정보들
 	public MemberDto getMyPageInfos(String id) {
 		MemberDto dto = new MemberDto();
 		String sql = "select * from member where id=?";
@@ -62,7 +60,6 @@ public class MemberDB {
 		return dto;
 	}
 
-	// profile img 업로드
 
 	public void insertProfile(MemberDto dto) {
 		String sql = "update member set user_img=?, introduce=? where id=?";
@@ -111,7 +108,6 @@ public class MemberDB {
 		return dto;
 	}
 
-	// 아이디가 있으면 true,없으면 false반환
 	public boolean isExistingId(String id) {
 		boolean find = false;
 		String sql = "select * from member where id=?";
@@ -122,12 +118,10 @@ public class MemberDB {
 		conn = db.getConnection();
 		try {
 			pstmt = conn.prepareStatement(sql);
-			// 바인딩
 			pstmt.setString(1, id);
-			// 실행
 			rs = pstmt.executeQuery();
 
-			if (rs.next())// 해당 아이디가 있을경우 true
+			if (rs.next())
 				find = true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -148,12 +142,10 @@ public class MemberDB {
 		conn = db.getConnection();
 		try {
 			pstmt = conn.prepareStatement(sql);
-			// 바인딩
 			pstmt.setString(1, nick);
-			// 실행
 			rs = pstmt.executeQuery();
 
-			if (rs.next())// 해당 아이디가 있을경우 true
+			if (rs.next())
 				find = true;
 		} catch (SQLException e) {
 			e.printStackTrace();

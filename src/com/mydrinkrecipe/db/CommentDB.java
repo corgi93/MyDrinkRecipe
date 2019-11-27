@@ -13,7 +13,7 @@ import com.mydrinkrecipe.dto.CommentDto;
 public class CommentDB {
 	DbConnect db = new DbConnect();
 
-	// 댓글추가
+	// �뙎湲�異붽�
 	public void insertComment(CommentDto dto) {
 
 		String sql = "insert into r_comment values (seq_comment.nextval,?,?,?,?,sysdate)";
