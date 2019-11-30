@@ -9,19 +9,10 @@
 	request.setCharacterEncoding("utf-8");
 	String recipe_bno = request.getParameter("recipe_bno");
 	
-	System.out.println(recipe_bno);
-
 	CommentDB db=new CommentDB();
 	List<CommentDto> list=db.getCommentList(recipe_bno);
 	
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
-	
-/* 	for(CommentDto c_dto:list) {
-		System.out.println(c_dto.getRecipe_bno());
-		System.out.println(c_dto.getContent());
-		System.out.println(c_dto.getWriteday());
-		
-	} */
 	
 %>
 <result>

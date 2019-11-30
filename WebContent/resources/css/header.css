@@ -27,7 +27,6 @@ a {
 }
 
 div.logo {
-	width: 30%;
 	height: 45px;
 	line-height: 45px;
 	font-family: 'Anton', sans-serif;
@@ -36,7 +35,60 @@ div.logo {
 	float: left;
 	color: #0522ee;
 }
+/* bubble effect */
+div#category {
+	display: inline;
+	line-height: 45px;
+	margin-left: 20px;
+}
 
+button.category_btn {
+	width: 45px;
+	height: 45px;
+	font-size : 14px;
+	position: relative;
+	cursor: pointer;
+	border : none;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	overflow: hidden;
+	background-color : #fff;
+	box-shadow: 0 1px 3px rgba(black, .2);
+	transform: translate3d(0, 0, 0);
+}
+
+.wave {
+  opacity: .4;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  background: #0ee;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-bottom: -301px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  
+  transition-duration: 0.75s;
+  transition-property: margin-bottom;
+  transition-timing-function: ease;
+}
+
+button:hover .wave {
+  margin-bottom: -250px;
+  animation: rotate 2000ms infinite linear;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/**/
+
+/* header 오른쪽 section */
 div.user_area {
 	float: right;
 }

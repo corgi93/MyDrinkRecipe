@@ -65,20 +65,19 @@
 	list = s_db.getList(my_id, startNum, endNum);
 %>
 
-
 <ScrapedList> 
-<%
+ <%
  	for (MyScrapedDto dto : list) {
  %> 
- <RecipeCard>
-<myId><%=dto.getImg()%></myId> 
-<recipeBno><%=dto.getRecipe_bno()%></recipeBno>
-<title><%=dto.getTitle()%></title>
-<writer><%=dto.getWriter()%></writer>
-<time><%=dto.getTime()%></time> 
-<likecount><%=dto.getLikecount()%></likecount>
-<img><%=dto.getImg()%></img> 
-<userImg><%=dto.getUser_img()%></userImg>
+  <RecipeCard>
+	<myId><%=dto.getImg()%></myId> 
+	<recipeBno><%=dto.getRecipe_bno()%></recipeBno>
+	<title><%=dto.getTitle()%></title>
+	<writer><%=dto.getWriter()%></writer>
+	<time><%=dto.getTime()%></time> 
+	<likecount><%=dto.getLikecount()%></likecount>
+	<img><%=dto.getImg()%></img> 
+	<userImg><%=dto.getUser_img()%></userImg>
 </RecipeCard>
  <%
  	}

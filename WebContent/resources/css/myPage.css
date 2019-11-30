@@ -69,6 +69,18 @@ button.modify_profile:hover {
 	margin-top: 30px;
 }
 
+/* ajax content영역 */
+.content {
+	padding: 10px;
+	background: tomato;
+	height: 100%;
+}
+
+.tablist.active {
+	background: tomato;
+	color: white;
+}
+
 /* tab영역 */
 .tab {
 	border: 1px solid #dedede;
@@ -77,7 +89,7 @@ button.modify_profile:hover {
 	margin-top: 50px;
 }
 
-.tabmenu>div {
+.tabmenu>div.tablist {
 	display: inline-block;
 	width: 145px;
 	text-align: center;
@@ -85,10 +97,70 @@ button.modify_profile:hover {
 	line-height: 50px;
 }
 
+.tabmenu>div.tablist:visited {
+	display: inline-block;
+	width: 145px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 2px solid #fe850e;
+}
+
+/* pagination */
+.pagination {
+	list-style: none;
+	display: inline;
+}
+
+.pagination>li {
+	border: 1px solid #0000ff;
+	background: #fff;
+	width: 30px;
+	display: inline-block;
+	margin-left: 2px;
+	text-align: center;
+}
+
+/* tabcontent1  */
 .tab_content {
 	background-color: white;
 	padding: 50px 100px;
 	position: relative;
+}
+
+/* tabcontent2  */
+.my_recipes {
+	display: inline-block;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 150px;
+	border: 1px solid #efefef;
+	box-shadow: 0 2px 3px #eee;
+	background-color: #fff;
+}
+
+h2.r_title {
+	margin: 0;
+}
+
+button.myRecipeBtn {
+	width: 40px;
+	height: 40px;
+	background-color: #fe850e;
+	border: none;
+	border-radius: 0.8em;
+	color: #fff;
+	margin-top: 30px;
+	background-color: #fe850e;
+}
+
+button.myRecipeBtn:hover {
+	width: 40px;
+	background-color: #ff6633;
+	border: none;
+	border-radius: 0.8em;
+	color: #fff;
+	margin-top: 30px;
 }
 
 /* modal 영역  */
@@ -141,6 +213,7 @@ button.complete {
 
 .modify_btn {
 	width: 300px;
+	margin: 0 auto;
 }
 
 .modal {
