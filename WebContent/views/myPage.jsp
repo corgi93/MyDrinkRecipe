@@ -130,6 +130,7 @@
 		var followingContent = document.getElementById("list_of_following");
 		
  		window.addEventListener("load", function(){
+ 			console.log("eee")
  			getScrapedRecipes(1)
 		}) 
 
@@ -145,7 +146,7 @@
 			event.currentTarget.className += " active";
 		}
 
-		function getScrapedRecipes(pageNum) {
+		function getScrapedRecipes( pageNum ) {
 			var myid = document.getElementById("myid").value;
 
 			$.ajax({

@@ -92,6 +92,6 @@
 	<endNum><%=endNum %></endNum>
 	<perPage><%=perPage %></perPage>
 	<perBlock><%=perBlock %></perBlock>
-	<no><%=no %></no2>
+	<no><%=no %></no>
 </paging>
 </ScrapedList>
