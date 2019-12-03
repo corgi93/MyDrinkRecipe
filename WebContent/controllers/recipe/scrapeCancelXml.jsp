@@ -5,14 +5,11 @@
 	pageEncoding="utf-8"%>
 
 <%
-	String myid = (String)session.getAttribute("id");
+	String myid = (String) session.getAttribute("id");
 	String recipe_bno = request.getParameter("recipe_bno");
-	
+
 	ScrapedDB db = new ScrapedDB();
 	ScrapedRecipeDto dto = new ScrapedRecipeDto();
 	
-	dto.setRecipe_bno(recipe_bno);
-	dto.setMy_id(myid);
-	
-	db.insertScrapedRecipe(dto);
-%>	
+	db.deleteScrape(myid, recipe_bno);
+%>
