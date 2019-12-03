@@ -269,7 +269,7 @@
 	</div>
 
 
-	<footer> 사업자: team_Acorn </footer>
+	<footer> 사업자:  </footer>
 
 
 	<script type="text/javascript">

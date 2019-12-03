@@ -4,7 +4,7 @@
 	margin: 50px auto;
 	width: 60%;
 	height: 100%;
-	background-color: #eee;
+	background-color: white;
 	
 }
 
@@ -39,7 +39,7 @@
 	height: 350px;
 	border: 1px solid #efefef;
 	box-shadow: 0 2px 3px white;
-	background-color: #fff;
+	background-color: #efefef;
 }
 
 img {
